@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Descriptive Statistics} %\input{tcilatex}
+
+\begin{document}
+%----------------------------------------------------------%#
+
+	\section*{Quartiles}
+	
+	\begin{itemize}
+		\item Quartiles are values that divide a sample of data into four groups containing (as far as possible) equal numbers of observations.
+		\item 
+		A data set has three quartiles. References to quartiles often relate to just the outer two, the upper and the lower quartiles; the second quartile being equal to the median. \item The lower quartile$Q_1$  is the data value a quarter way up through the ordered data set; the upper quartile $Q_3$ is the data value a quarter way down through the ordered data set. \item The middle quartile $Q_2$ is the median.
+	\end{itemize}
+\subsection*{Computing Quartiles - Even Sized Data Sets}
+	\begin{itemize}
+		\item Previously we discussed how to compute the median for odd-sized and even-sized data sets respectively (i.e. middle value or average of middle pair of values)
+		\item To compute $Q1$ and $Q3$, it is best to consider them as the median of the lower half of values and higher half of values respectively. \bigskip
+		\item Consider the following data set (ordered with 10 items):  $\{ 6, 7 ,15, 36, 39, 41, 41 ,43, 43, 47 \}$
+		\item The lower half of the data set (lower partition) is : $\{ 6, 7 ,15, 36, 39 \}$
+		\item The upper half of the data set (upper partition) is : $\{ 41, 41 ,43, 43, 47 \}$
+	%	\item $Q_1$ is the median of the lower partition, i.e. 15.
+	%	\item $Q_3$ is the median of the upper partition, i.e. 43.
+	\end{itemize}
+
+
+
+
+	
+	\begin{itemize}
+		\item For both the lower and upper halves, there is an odd number of items contained.
+		\item Recall that the median of the odd-sized data set is the middle value of the ordered set.
+		\item The medians are 15 and 43 respectively.
+		\item So the first and third quartiles are $Q_1 = 15$ and $Q_3 = 43$ respectively.
+	\end{itemize}
+
+\subsection*{Computing Quartiles - Odd Sized Data Sets}
+	In the last example, the full data set comprised an even number of items, and it was easy to split it into an lower half and an upper half. Consider the following data set.
+	\begin{itemize}
+		\item Data:  $\{6, 47, 49, 15, 43, 41, 7, 39, 43, 41, 36\}$
+		\item Ordered Data: $\{ 6, 7 ,15, 36, 39, 41, 41 ,43, 43, 47, 49 \}$
+		\item Sample size: 11
+		\item Median:  41 (6th item)
+	\end{itemize}
+	How do we split up the ordered data into two halves here?
+
+	\begin{itemize}
+		\item The lower half of values  \begin{itemize} \item[A] - could contain either the lowest 5 values (i.e. excluding the median)
+			
+			\[\{ 6, 7 ,15, 36, 39\}\]
+			\item[B] - or the lowest six values (i.e. including the median).  \[\{ 6, 7 ,15, 36, 39,41\}\] \end{itemize}
+		\item Consequently the upper half of values \begin{itemize} \item[A] -  will contain either the highest 5 values (i.e. excluding the median) \[\{ 41 ,43, 43, 47, 49 \}\] \item[B] - or the highest 6 values (i.e. including the median).
+			\[\{ 41, 41 ,43, 43, 47, 49 \}\] \end{itemize}
+		
+	\end{itemize}
+	
+
+	\begin{itemize}
+		\item The value of $Q_1$ and $Q_3$ depend on which approach is used to calculate them.
+		\begin{itemize}
+			\item For option $A$ : $Q_1 = 15$ and $Q_3 = 43$.
+			\item For option $B$ : $Q_1 = 25.5$ and $Q_3 = 43$.
+		\end{itemize}
+		\item Unfortunately there is no consensus on which approach to take; different textbooks use different approaches.
+		\item In some computing environments, different commands yields different results for quartiles.
+		\item For larger data sets, the difference in outcomes is often negligible.
+		\item \textbf{Important:} In this module, we will use option $A$ (i.e. excluding the median) only.
+	\end{itemize}
+
+\newpage	
+\section*{Interquartile Range}
+	\begin{itemize}
+		\item The interquartile range (IQR) is measure of dispersion, that can be used as an alternative to variance/standard deviation.
+		\item It is computed as follows:  \[ \mbox{ IQR }  = Q_3 - Q_1 \]
+		\item For the data set used previously:
+		\[ \mbox{ IQR }  = 43 - 15  = 28 \]
+	\end{itemize}
+	
+\section*{Quantiles}
+	Quartiles are just one type of statistic known as ``Quantiles".
+	Quantiles are values which divide the distribution such that there is a given proportion of observations below the quantile.\\ \bigskip
+	\textbf{Other Examples of Quantiles}\\
+	\begin{description}
+		\item[Deciles]  any of the nine values that divide the sorted data into ten equal parts,
+		\item[Quintiles] any of the four values that divide the sorted data into five equal parts,
+		\item[Percentiles]any value below which a certain percentage of observations fall,
+	\end{description}
+	
+	Quantiles can be expressed in terms of other quantiles. For example, the first decile is equivalent to the $10\%$ percentile, $Q_1$, the median and $Q_3$ are equivalent to the $25\%$, $50\%$, $75\%$ percentile.
+	
+\section*{Tukey five-number summary}
+	The Tukey five-number summary is a statistical summary that provides information about a dataset.
+	The summary consists of the five most commonly used sample quantiles:
+	
+	\begin{itemize}
+		\item the lowest value in the dataset
+		\item the first quartile ($Q_1$)
+		\item the median ($Q_2$)
+		\item the third quartile ($Q_3$)
+		\item the highest value in the dataset
+	\end{itemize}
+	
+
+
+\end{document}
