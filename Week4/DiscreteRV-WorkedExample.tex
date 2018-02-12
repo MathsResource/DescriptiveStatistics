@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Discrete Random Variables} %\input{tcilatex}
+
+\begin{document}
+\section*{Discrete Random Variables: Worked Example}
+
+Suppose $X$ is a random variable with 
+\begin{itemize}
+\item $E(X^2)=3.6$
+\item $P(X=2)=0.6$
+\item $P(X=3)=0.1$
+\end{itemize}
+
+
+\noindent \textbf{Questions:}
+\begin{itemize}
+\item[(a)] The random variable takes just one other value besides 2 and 3. This value is greater than 0. What is this value?
+\item[(b)] Calculate the expected value of $X$.
+\item[(c)] What is the variance of $X$?
+\end{itemize}
+
+%-------------------------------------------------------------%
+
+
+
+
+\noindent \textbf{Part a}
+\begin{itemize}
+\item Firstly we have to determine the missing value (let's call it $k$), and then determine the probability of that value. 
+\item We know that $E(X^2)=3.6$. Let use the approach for computing $E(X^2)$.
+
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$ & \phantom{sp}2\phantom{sp} & \phantom{sp}3\phantom{sp} & \phantom{sp}k\phantom{sp} \\ \hline
+$x^2_i$ & 4 & 9 & $k^2$ \\ \hline
+$P(x_i)$ & 0.6 &  0.1 &  \\ \hline 
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$ & \phantom{sp}2\phantom{sp} & \phantom{sp}3\phantom{sp} & \phantom{sp}k\phantom{sp} \\ \hline
+$x^2_i$ & 4 & 9 & $k^2$ \\ \hline
+$P(x_i)$ & 0.6 &  0.1 & \textbf{0.3} \\ \hline 
+\end{tabular}
+\end{center}
+
+
+
+
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$ & \phantom{sp}2\phantom{sp} & \phantom{sp}3\phantom{sp} & \phantom{sp}k\phantom{sp} \\ \hline
+$x^2_i$ & 4 & 9 & $k^2$ \\ \hline
+$p(x_i)$ & 0.6 &  0.1 & 0.3 \\ \hline 
+\end{tabular}
+\end{center}
+
+
+\[ E(X^2) =  \sum  x^2_i \cdot p(x_i)  = 3.6 \]
+
+\[(4 \times 0.6) + (9\times 0.1) + (k^2\times 0.3) = 3.6 \]
+
+
+
+
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$ & \phantom{sp}2\phantom{sp} & \phantom{sp}3\phantom{sp} & \phantom{sp}k\phantom{sp} \\ \hline
+$x^2_i$ & 4 & 9 & $k^2$ \\ \hline
+$p(x_i)$ & 0.6 &  0.1 & 0.3 \\ \hline 
+\end{tabular}
+\end{center}
+
+
+\begin{itemize}
+\item $ E(X^2) =  \sum  x^2_i \cdot p(x_i)  = 3.6 $
+\item $(4 \times 0.6) + (9\times 0.1) + (k^2\times 0.3) = 3.6 $
+\item $2.4 + 0.9 + (k^2\times 0.3) = 3.6 $
+
+\item $ 3.3 + 0.3k^2 = 3.6$
+
+\item $0.3k^2 =0.3$
+\end{itemize}
+
+
+\begin{center}
+$k^2 = 1$  \qquad Therefore $k=1$
+\end{center}
+
+%-------------------------------------------------------------%
+
+
+
+\noindent \textbf{Part b}\\
+Compute the variance of $X$
+
+\[ \mbox{Var}(x) = E(X^2) - \{E(X)\}^2 \]
+
+
+\begin{itemize}
+\item We already know $E(X^2) =3.6$
+\item Need to compute $E(X)$.
+\end{itemize}
+
+%-------------------------------------------------------------%
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$ & 2 & 3 & 1 \\ \hline 
+$p(x_i)$ & 0.6 &  0.1 & 0.3 \\ \hline
+\end{tabular}
+\end{center}
+
+\[ E(X) =  \sum  x_i \cdot p(x_i)   \]
+
+
+
+
+
+
+
+
+
+
+\[E(X) = (2\times 0.6) + (3 \times 0.1) + (1 \times 0.3) = 1.8 \]
+
+
+
+%-------------------------------------------------------------%
+
+
+
+
+
+\noindent \textbf{Part c}\\
+Compute the variance of $X$
+
+\[ \mbox{Var}(X) = E(X^2) - \{E(X)\}^2 \]
+
+\[ \mbox{Var}(X) = 3.6 - \{1.8\}^2 \]
+
+
+\[ \mbox{Var}(X) = 3.6 - 3.24  = \boldsymbol{0.36} \]
+
+%-----------------------------------------------------------------------------------%
+
+%--------------------------------------------------------%
+\end{document}
