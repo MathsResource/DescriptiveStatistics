@@ -1,0 +1,99 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Descriptive Statistics} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Calculating Measures of Dispersion}
+
+Consider the following sample of values $X$.
+\[ X= \{13,4,6,8,12,15,19,11\}\]
+Compute the sample variance, sample standard deviation and the inter-quartile range
+\subsection*{Solution}
+\begin{itemize}	
+	\item To compute the sample variance ($s^2$), we would use the following formula
+	\[ s^2 = \frac{\sum(x_i - \bar{x})^2}{n-1}\]
+	\item For the sake of ledgibility, we will use a tabular format (although it is not necessary to use the approach).
+\end{itemize}
+\begin{framed}
+\noindent \textbf{Variance and Standard Deviation: Step by Step}
+\begin{enumerate}
+	\item Calculate the mean, $\bar{x}$. 
+	
+	\item Write a table that subtracts the mean from each observed value.
+	
+	\item Square each of the differences.
+	
+	\item Add this column.
+	
+	\item Divide by $n-1$ where n is the number of items in the sample  This is the \textit{\textbf{variance}}.
+	
+	\item To get the standard deviation we take the square root of the variance.  
+\end{enumerate}
+\end{framed}
+\begin{center}
+	{
+		
+		\begin{tabular}{|c|c|c|c|}
+			\hline \phantom{spa}i\phantom{sap} & \phantom{sp}element $x_i$\phantom{sp} & \phantom{sp}$x_i-\bar{x}$ \phantom{sp}&\phantom{sp} $(x_i-\bar{x})^2$\phantom{sp}   \\ \hline
+			\hline  1& 4 & (4-11) = -7 & $(-7^2)$ = 49   \\ 
+			\hline  2& 6 & (6-11) = -5 & $(-5^2)$ = 25   \\ 
+			\hline  3& 12 & (12-11) = 1 & $(1^2)$ = 1   \\ 
+			\hline  4& 8 & (8-11) = -3 & $(-3^2)$ = 9  \\ 
+			\hline  5& 15 & (15-11) = 4 & $(4^2)$ = 16   \\ 
+			\hline  6& 19 & (19-11) = 8 & $(8^2)$ = 64   \\ 
+			\hline  7& 11 & (11-11) = 0 & $(0^2)$ = 0   \\ 
+			\hline  8& 13 &  (13-11) =2 & $(2^2)$ = 4   \\ \hline
+			\hline & & {\Large \phantom{spacesp}}$\sum$ & \textbf{168} \\
+			\hline 
+		\end{tabular} 
+	}
+	
+	
+\end{center}
+
+\[ s^2 = \frac{\sum(x_i - \bar{x})^2}{n-1} = \frac{168}{7} = 24 \]
+\begin{itemize}
+	\item The \textbf{Sample Standard Deviation} is simply the square root of the variance
+	\[s = \sqrt{24} \]
+	\item To compute the interquartile range, partition the ordered data set into two halves. Compute the median of each half.
+	\begin{itemize}
+		\item The median of the lower half is the \textbf{First Quartile} $Q_1$
+		\item The median of the upper hald is the \textbf{Third Quartite} $Q_3$
+	\end{itemize}
+	\begin{framed}
+		\textbf{Guidelines for this module:}\\ When there is an odd number of elements in the data set, include the middle value, i.e. the median, in both the upper and lower partition.\\ There are other equally acceptable approaches, but for the sake of uniformity we will just use this one.
+	\end{framed}
+	
+	\item For our example, We partition the data set as follows:
+	\[X_L =\{ 4, 6, 8, 11 \}\]
+	\[X_U = \{12, 13, 15, 19\}\]
+	The medians of both partitions are 7 and 14 respectively \textit{(averages of the middle pairs for both partitions)}
+	\[Q_1 = \frac{6+8}{2} = 7\]
+	\[Q_3 = \frac{13+15}{2} = 14\]
+	\textit{(Remark : The Median is the second quartile, denoted $Q_2$)}
+	\item The interquartile range is computed as $IQR = Q_3-Q_1 = 14-7 = 7$
+\end{itemize}
+\end{document}
+
+\newpage
