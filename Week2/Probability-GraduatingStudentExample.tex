@@ -1,0 +1,121 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+\section*{Probability: Graduating Student Worked Example }
+A student can enter a course either as a beginner (73\%) or as a transferring student (27\%).It is found that 62\% of beginners eventually graduate, and that 78\% of transfers eventually graduate. Find: 
+\begin{enumerate}[(A)]
+	\item the probability that a randomly chosen student is a beginner who will
+	eventually graduate
+	\item the probability that a randomly chosen student will eventually graduate
+\item Compute the probability that a randomly chosen student is either a beginner or will
+eventually graduate, or both.
+\item If a student eventually graduates, what is the probability that the student entered
+as a transferring student?
+\item Are the events ``Eventually graduates" and ``Enters as a transferring student"?
+statistically independent?
+\end{enumerate}
+%------------------------------------------------------------------%
+\begin{framed}	
+\noindent \textbf{Events}
+	
+	\begin{itemize}
+		\item Student enters as a \textbf{\emph{beginner}} (B) : $P(B)=0.73$
+		\item Student enters as a \textbf{\emph{transfer}} (T) : $P(B)=0.27$
+		\item A student \textbf{\emph{graduates}} (G) : To be determined.
+	\end{itemize}
+\end{framed}
+\textbf{Conditional Probabilities}
+\begin{itemize}
+	\item Given that student was a beginner, the probability of graduating is $P(G|B)$ = 0.62.
+	\item Given that student was a transfer, the probability of graduating is $P(G|T)$ = 0.78.
+\end{itemize}
+
+% \frametitle{Review Question 1 :  Probability}
+\subsection*{Solution to Part A}
+\begin{itemize}
+	\item Compute the probability that a randomly chosen student is a beginner who will
+	eventually graduate P(B and G)
+	\item Recall \textbf{Conditional Probability} formula
+	\[P(A|B_ = \frac{P(A \mbox{ and } B)}{P(B)})\]
+	\item Re-arranging
+	\[P(A \mbox{ and } B) = P(A|B)\times P(B)  \]
+	\item Solving
+	\[P(B \mbox{ and } G) = P(G|B)\times P(B) = 0.62 \times 0.73  = 0.4526 \]
+	\item Similarly, for Transfer students
+	\[P(T \mbox{ and } G) = P(G|T)\times P(T) = 0.78 \times 0.27  = 0.2106 \]
+\end{itemize} 
+
+\subsection*{Solution to Part B}
+\begin{itemize}
+	\item Compute the probability that a randomly chosen student will eventually graduate
+	\item Graduating class can be subdivided into two groups : graduates who were beginners and grduates who were transfers
+	\item Writing this mathematically:
+	\[P(G) = P(G \mbox{ and } B) + P(G \mbox{ and } T) \]
+	\item Using our previous results
+	\[P(G) = 0.4526 + 0.2106 = 0.6632 \]
+	\item The probability that a randomly chosen student will eventually graduate is 66.32\%.
+\end{itemize} 
+
+\subsection*{Solution to Part C}
+\noindent Compute the probability that a randomly chosen student is either a beginner or will
+eventually graduate, or both.
+\begin{itemize}
+	\item From Question 1: P(B) = 0.73, P(G) = 0.6632, P(G and B) = 0.4526
+	\item Using the addition rule
+	\[P(G \mbox{ or } B) = P(G) + P(B) - P(G \mbox{ and } B)\]
+	\item Using our values
+	\[P(G \mbox{ or } B) = 0.73 + 0.6632 - 0.4526 = 0.9406\]
+\end{itemize}
+
+\subsection*{Solution to Part D}
+\noindent If a student eventually graduates, what is the probability that the student entered
+as a transferring student?
+\begin{itemize}
+	\item Writing this mathematically: $P(T|G)$
+	\item Using Bayes' formula (in formula sheet)
+	\[P(A|B)=  {(P(B|A)\times \frac{P(A)}{ P(B)}} \]
+	\item Using Bayes' formula (in formula sheet)
+	\[P(T|G)=  {(P(G|T)\times \frac{P(T)}{P(G)}} = \frac{0.78 \times 0.27}{0.6632} = 0.3175 \]
+\end{itemize}
+
+\subsection*{Solution to Part E}
+\noindent Are the events \textbf{Eventually graduates} and \textbf{Enters as a transferring student}
+statistically independent?
+
+\begin{itemize}
+	\item If two events A and B are independent, then we can say
+	\[P(A \mbox{ and } B) = P(A) \times P(B)\] 
+	\item We have the following values:
+	\[P(T \mbox{ and } G) = 0.2106\]
+	\item Also
+	\[P(T) \times P(G) = 0.27 \times 0.6632 = 0.1790\]
+	\item Comparing the two values:
+	\[P(T \mbox{ and } G) \neq P(T) \times P(G)\] 
+	\item We conclude that the events are not independent.
+\end{itemize}
+
+			
+	
+\end{document}
