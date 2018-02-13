@@ -1,0 +1,87 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{framed}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Statistical Computing} %\input{tcilatex}
+
+\begin{document}	
+\section*{Test for Equality of Variance with \texttt{R}}
+	\begin{itemize}
+		\item In this procedure, we determine whether or not two populations have the same variance.
+		\item The assumption of equal variance of two populations underpins several inference procedures. This assumption is tested by comparing the variance of samples taken from both populations.
+\textit{ We will not get into too much detail about that, but concentrate on how to assess equality of variance.}
+		\item The null and alternative hypotheses are as follows:
+		\[ H_0: \sigma^2_1 = \sigma^2_2 \]
+		\[ H_1: \sigma^2_1 \neq \sigma^2_2 \]
+
+		\item When using \texttt{R} it would be convenient to consider the null and alternative in terms of variance ratios.
+		\item Two data sets have equal variance if the variance ratio is 1.
+
+	\[ H_0: \sigma^2_1 / \sigma^2_2 = 1 \]
+	\[ H_1: \sigma^2_1 / \sigma^2_2 \neq 1 \]
+	
+	%----------------------------------------%
+	% - x=c(14,13,16,20,12,18,11,09,13,11)
+	% - y=c(15,13,18,20,10,17,23,11,10)
+	%----------------------------------------%
+
+\item You would be required to compute the test statistic for this procedure.
+\item The test statistic is the ratio of the variances for both data sets.
+	\[ TS = \frac{s^2_x}{s^2_y} \]
+\item The standard deviations would be provided in the question. Suppose we have the following values: \begin{itemize}
+		\item[$\ast$] Sample standard deviation for data set $x$ = 3.40.
+		\item[$\ast$] Sample standard deviation for data set $y$ = 4.63.
+	\end{itemize}
+\item To compute the test statistic.
+	\[ TS = \frac{3.40^2}{4.63^2} = \frac{11.56}{21.43} = 0.5394 \]
+		\end{itemize}
+\newpage
+	\begin{framed}
+		\begin{verbatim}
+		> var.test(x,y)
+		
+		F test to compare two variances
+		
+		data:  x and y
+		
+		F = 0.5394, num df = 9, denom df = 8, p-value = 0.3764
+		
+		alternative hypothesis: 
+		  true ratio of variances is not equal to 1
+		
+		95 percent confidence interval:
+		  0.1237892 2.2125056
+		
+		sample estimates:
+		  ratio of variances
+		  0.5393782
+		\end{verbatim}
+	\end{framed}		
+	
+
+	\begin{itemize}
+		\item The $p-$value is 0.3764 (top right). The threshold is $\alpha/2 = (0.05/2) = 0.0250$.
+		\item We fail to reject the null hypothesis. \medskip
+		\item We don't have evidence of a significant difference in sample variances. Therefore we can use the assumption that both populations have equal variance. \medskip
+		\item Additionally the $95\%$ confidence interval (0.1237, 2.2125) contains the expected value of the variance ration under the null hypothessi i.e. 1.
+	\end{itemize}
+	
+\end{document}
