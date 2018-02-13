@@ -1,0 +1,80 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Descriptive Statistics} %\input{tcilatex}
+
+\begin{document}
+\section*{The Inter-quartile Range}
+
+\begin{itemize}
+    \item The Inter-quartile Range ($Q_3  - Q_1$) is a  measure of variability commonly used for skewed data.
+\item The IQR is the difference between the point below which 25\% of your data lie and the point below which 75\% of your data lie i.e. $Q_3  - Q_1$. 
+\item To find the value of the quartiles, think of $Q_1$ as the middle of the data less than or equal to the median (lower partition), and of $Q_3$ as the middle of the data greater than or equal to the median (upper partition).
+\item Use the same technique for calculating the median to find these values.
+\end{itemize}
+
+%=================================================%
+
+\subsection*{Worked Example}
+
+
+
+\begin{itemize}
+\item Find the three quartiles and the IQR of the following data
+
+\[ X = \{15,  34,  7,  12,  18,  9,  1,  42,  56,  28,  13,  24,  35\}  \]
+
+\item First sort the data set into ascending order
+
+\[X = \{1, 7,  9, 12, 13, 15, 18,  24, 28, 34, 35, 42, 56\}\]
+
+
+\item Count how many items are in the data set.\\ Answer: 13 items
+
+\item Which value is the second quartile, i.e. the median? \\ Answer: the 7th item, which is 18.
+\end{itemize}
+
+
+
+\subsection*{The First Quartile}
+
+$Q_1$ is median of data less than or equal to median: 
+
+\[X_{L} = \{1,7,  9, 12, 13, 15, 18\} \]
+Answer: the 4th item of 7, which is 12.
+
+\subsection*{The Third Quartile}
+
+$Q_3$ is median of data greater than or equal to median:
+
+
+
+\[X_{U} = \{18,  24, 28, 34, 35, 42, 56\}\] 
+Answer: the 4th item of 7, which is 34.
+
+
+
+\subsection*{The Inter-quartile Range}
+The three quartiles are therefore $Q_1 = 12, Q_2 = 18, Q_3 = 34$.
+The inter-quartile range is therefore $Q_3 - Q_1 = 22$
+
+%=================================================%
+\end{document}
