@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Statistical Computing} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Grubbs Test for Determining an Outlier}
+\begin{itemize}
+    \item The Grubbs test is used to determine if there are any outliers in a data set.\item There is no agreed formal definition for an outlier. The definition of outlier used for this procedure is a value that unusually distance from the rest of the values. \item For the sake of clarity, we shall call this type of outlier a \textbf{Grubbs Outlier}.
+\end{itemize}	
+	
+\subsection*{Example}	
+	Consider the following data set: Is the lowest value 4.01 an outlier?
+	\begin{framed}
+		\begin{verbatim}
+		6.98 8.49 7.97 6.64	8.80 8.48 5.94 6.94 6.89 7.47 7.32 4.01
+		\end{verbatim}
+	\end{framed}
+	
+\noindent The alternative hypothesis is explicitly stated in the code output below. Under the null hypothesis, there are no outliers present in the data set. We reject this hypothesis if the p-value is sufficiently small.
+	
+\begin{framed}
+	\begin{verbatim}
+	> grubbs.test(x, two.sided=T)
+	
+	Grubbs test for one outlier
+	data: x
+	
+	G = 2.4093, U = 0.4243, p-value = 0.05069
+	
+	alternative hypothesis: lowest value 4.01 is an outlier
+	\end{verbatim}
+\end{framed}	
+\noindent The $p-$ value is not sufficiently low, and hence we fail to reject the null hypothesis. We conclude that while small by comparison to the other values, we dont have enough evidence to consider the lowest value 4.01 to be an outlier. 
+	
+\end{document}	
