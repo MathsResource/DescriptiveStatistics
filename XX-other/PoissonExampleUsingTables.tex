@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+
+%---------------------------------------------------------------------%
+
+\section*{Poisson Example}
+A motor dealership which specializes in agricultural machinery sells one vehicle every 2 days, on average. Using Poisson Distribution Tables, answer the following questions.
+\begin{enumerate}[(a)]
+\item   What is the probability that the dealership sells at least one vehicle in one particular day?
+\item   What is the probability that the dealership will sell exactly one vehicle in one particular day?
+\item   What is the probability that the dealership will sell 4 vehicles or more in a six day working week?
+\end{enumerate}
+
+
+%---------------------------------------------------------------------%
+
+\noindent \textbf{Solutions}\\
+Expected Occurrences per Day: m = 0.5
+\begin{enumerate}[(a)]
+ 
+\item  Probability that the dealership sells at least one vehicle in one particular day?
+\[ P(X \geq 1) = 0.3935 \]
+\item  Probability that the dealership will sell exactly one vehicle in one particular day?
+\[ P(X = 1) = P(X \geq 1) - P(X \geq 2)  = 0.3935 - 0.0902 = 0.3031\]
+\item  Probability that the dealership will sell 4 vehicles or more in a six day working week?
+\begin{itemize}
+\item  For a 6 day week, m=3
+\item  $P(X \geq 4) = 0.3528$
+\end{itemize}
+\end{enumerate}
+
+
+\end{document}
