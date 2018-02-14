@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Hypothesis Testing} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Difference in Proportions: Early Childhood Intervention Programs}
+\begin{itemize}
+\item An experiment is conducted investigating the long-term effects of early childhood intervention programs (such as head start).
+\item In one experiment, the high-school drop out rate of the experimental group (which attended the early childhood program)
+and the control group (which did not) were compared.
+\item In the experimental group, 73 of 85 students graduated from high school. \item In the control group, only 43 of 82 students graduated.
+Is this difference statistically significant? (Assume that the 0.05 level is chosen.) 
+\end{itemize}
+
+
+
+
+
+\begin{itemize}
+\item
+The first step in hypothesis testing is to specify the null hypothesis and an alternative hypothesis.
+\item When testing differences between proportions, the null hypothesis is that the two population proportions are equal.
+\item That is, the null and alternative hypotheses are:\\
+$H_0: \pi_1 = \pi_2$\\
+$H_1: \pi_1 \neq \pi_2$\\
+\item \textit{(Remark: Two Tailed Test: k = 2, and $\alpha = 0.05$)}
+\end{itemize}
+
+
+%-------------------------------------------------------------------------------------------%
+
+
+\begin{framed}
+\noindent \textbf{Standard Error for Hypothesis Testing}\\
+The aggregate sample proportion $\bar{p}$ is used in this calculation.
+
+\[\bar{p} = \frac{x_1 + x_2}{n_1 + n_2}\]
+%------------------------------------%
+
+\noindent The Standard Error is 
+\[ S.E.(\pi_1 - \pi_2) = \sqrt{\bar{p} \times (100-\bar{p}) \times \left(\frac{1}{n_1}+ \frac{1}{n_2} \right)}\]
+(\textit{Given in formula sheet})
+
+\end{framed}
+%------------------------------------%
+\textbf{Standard Error}
+
+The Test Statistic is formulated as
+
+\[ TS = \frac{(\hat{p}_1-\hat{p}_2)-(\pi_1 - \pi_2)}{S.E.(\pi_1 - \pi_2)}\]
+
+
+
+
+\begin{itemize}
+\item The next step is to compute the difference between the sample proportions.
+\item In this example, $\hat{p}_1 - \hat{p}_2$ = $\frac{73}{85} - \frac{43}{82}$ = $0.8588 - 0.5244 = 0.3344.$
+\item The point estimate, i.e. the difference in proportions, is $33.44\%$
+\end{itemize}
+
+
+\noindent The formula for the estimated standard error is:
+
+\[ S.E (\pi_1 - \pi_2)  \;=\; \sqrt{\bar{p}(1 - \bar{p}) \left( {1 \over n_1} + {1 \over n_2}  \right)} \]
+
+
+\noindent where $\bar{p}$ is a aggregate proportion (proportion of successes from overall sample, regardless of which group they are in).
+
+
+\begin{framed}
+\noindent \textbf{Aggregate Proportion}:\\
+\[ \bar{p}  = \frac{x_1  + x_2 }{ n_1 + n_2} \times 100\% \;=\; \frac{73+43 }{85 + 82} \times 100\% \;=\; \frac{ 116 }{ 167}\times 100\% = 69.5\% \]
+\end{framed}
+\textbf{Standard Error}:\\
+\[ S.E (\hat{p}_1 - \hat{p}_2)  \;=\;  \sqrt{69.5 \times 30.5 \left( \frac{1}{ 85} + \frac{1}{ 82}  \right)}  \;=\; 7.13\% \]
+
+
+
+\textbf{Test Statistic}:
+\begin{itemize} \item Observed difference :
+85.88\% - 52.44\%  = 33.44\% 
+%\item Calculation is based on \[ (73/85) - (43 /82) \]
+\item Under the null hypothesis, the expected difference in proportions is zero.
+\[ \pi_1 - \pi_2 = 0\]
+\item Test Statistic is therefore \[T.S. = {(33.44\% - 0\% )\over 7.13\%} = 4.69\]
+\item \textit{(Remark : Test Statistic is not denominated in any units)}
+\end{itemize}
+
+%-----------------------------------------------------------%
+
+\textbf{Critical Value}
+\begin{itemize}
+\item The critical value is 1.96 (large sample, $\alpha = 0.05$, k=2).
+\end{itemize}
+
+
+\textbf{Decision Rule}
+\begin{itemize} 
+\item The test statistic TS = 4.69, is greater than the critical value CV = 1.96, so we reject the null hypothesis.
+\item The conclusion is that the probability of graduating from high school is greater for students who have participated in the early childhood intervention program than for students who have not.
+\end{itemize}
+
+
+\end{document}
