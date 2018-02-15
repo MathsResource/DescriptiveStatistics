@@ -28,7 +28,7 @@
 
 \begin{itemize}
 	\item Components are placed into containers containing 100 items.
-	\item After an inspection of a large number of containers the average number of defective items was found to be 10 with a standard deviation of three.
+	\item After an inspection of a large number of containers the average number of defective items was found to be 10 units with a standard deviation of 3 units.
 	\item Is the binomial distribution a good useful distribution, given the observed data?
 \end{itemize}
 
@@ -54,12 +54,13 @@ Suppose there are twelve multiple choice questions in an English class quiz. Eac
 \subsection*{Solution}
 \begin{itemize}
 \item Since only one out of five possible answers is correct, the probability of answering a question correctly by random is $1/5=0.2$. 
-\item We can find the probability of having exactly 4 correct answers by random attempts as follows.(Blackboard. Correct Answer is 13.29\%)
+\item We can find the probability of having exactly 4 correct answers by random attempts as follows.
+%(Blackboard. Correct Answer is 13.29\%)
 \end{itemize}
 
 
 
-\[P(X=2) = ^{12}C_4 \times (1/5)^4 \times (4/5)^8 = 0.1329\]
+\[P(X=4) = ^{12}C_4 \times (1/5)^4 \times (4/5)^8 = 0.1329\]
 
 \begin{framed}
 \noindent \texttt{R} Code
@@ -107,6 +108,6 @@ Suppose there are twelve multiple choice questions in an English class quiz. Eac
 	\[ P(4\text{ defects})  = P(X = 4) = {6\choose 4}\times 0.3^4\times  (1-0.3)^{6-4} = 0.0595 \]
 
 
-
+(Remark: Here we are using alternative notation for the Choose Operator.)
 
 \end{document}
