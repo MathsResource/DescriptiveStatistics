@@ -1,0 +1,147 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+\section*{Summary of Normal Distribution Rules}
+
+
+
+\begin{framed}
+	\begin{itemize}
+			\item The Standardisation Formula
+			
+			\[P(X \leq Xo) = P(Z \leq Zo)	  \]  
+			
+			when   \[Zo=\frac{Xo- \mu}{\sigma}\]
+		\item The Complement Rule
+		\[
+		P(Z \leq z_o) = 1 - P(Z \geq z_o)
+		\]
+		\item The Symmetry Rule
+		\[
+		P(Z \leq -z_o) = P(Z \geq z_o)
+		\]
+		\item The Interval Rule.
+		Where $L$ and $U$ are the lower and upper bounds of an interval.
+		\[
+		P(L \leq Z \leq U) = P(Z \geq L) -  P(Z \geq U)
+		\]
+		
+	\end{itemize}
+\end{framed}
+	
+\section*{Normal Distribution : Arab Horses Worked Example}
+The mass of Arab horses is normally distributed with mean 900 lbs and standard deviation of 50lbs.
+\begin{enumerate}[(a)]
+\item  Calculate the probability that an Arab horse weighs more than 940 lbs.
+\item Calculate the probability than an Arab horse weighs between 880 lbs and 960 lbs.
+\end{enumerate}
+
+\noindent \textbf{Solution to Part A}
+
+\begin{itemize}
+	\item Let $X$ be mass of Arab horses.
+	
+	\item We have to find $P(X\leq940)$.  \\          
+	\textit{(Remark ``equality component" is included as a formality, but it is not important).}
+	
+	
+	\item	Find the Z value that corresponds to 940 
+	
+	\[Zo=\frac{Xo-\mu}{\sigma}= \frac{940 -900}{50}= 0.80\]
+	
+	\[P(X \leq 940) = P(Z \leq 0.80) \]
+	
+	
+	\item	From Murdoch Barnes tables 3, we find that $P(Z \leq 0.8) = 0.2119$
+	
+	\item 
+	Therefore $P(X \leq 940) = 0.2119$
+\end{itemize}
+\noindent \textbf{Solution to Part B}
+
+
+
+
+\noindent What proportion of horses are between 880 lbs and 960 lbs?
+\[P ( 880 \leq X \leq 960).\]
+\begin{itemize}
+	\item Find out the probability of the complement event.
+	\item The complement event is the combination of being too high  or too low for this interval.
+	
+	\item \textbf{Inside interval:} $P ( 880 \leq X \leq 960).$
+	
+	\item \textbf{Outside interval:} $P (X \leq 880) + P(X \geq 960)$
+	
+	\item Complement Rule $P ( 880\leq X \leq 960)  = 1 - [P (X\leq 880) +P(X\geq 960)]$
+	
+\end{itemize}
+
+\noindent  Find the probability of being too high?
+
+\[Z_o=\frac{X_o-\mu}{\sigma}= \frac{960 -900}{50}= 1.20\]
+
+\[P(X \leq 960) = P(Z \leq 1.20) = 0.1151\]
+
+
+\noindent Find the probability of being too low?
+\[Zo= \frac{Xo-\mu}{\sigma}= \frac{880 -900}{50}= -0.40 \]
+\[P(X \leq 880) = P(Z \leq -0.40)  \]
+
+%------------------------------------------------------------- %
+\noindent How to compute $P(Z \leq -0.40)$
+
+\noindent Symmetry: 	$P(Z \leq -0.40)$ = $P(Z \geq 0.40)$ = 0.3446
+
+
+\begin{itemize}
+	\item Outside Interval = 0.4596        (0.3446 +  0.1151)
+	\item Inside Interval = 0.5404
+\end{itemize}
+
+
+\[P ( 880 \leq X \leq 960)=0.5404 \]
+%------------------------------------------------------------- %
+\noindent \textbf{Solution to Part C}
+
+\noindent What weight is exceeded by 97.5\% of Arab horses? 
+
+\noindent Find $X_o$  such that $P(X\geq X_o) = 0.975$
+
+\begin{itemize}
+	\item 	$P(Z \geq 1.96) = 0.025$ [From Murdoch Barnes Tables] 
+	
+	\item	$P(Z \leq -1.96) = 0.025$ [Symmetry Rule]
+	
+	\item	$P(Z \geq -1.96) = 0.975$ [Complement Rule]     
+	
+	\item	Using this Z-score to find $X_o$
+	\[-1.96 = \frac{X_o- 900}{50} \]
+	
+	
+	\item	$X_o= 802$ lbs  [Answer]
+\end{itemize}	
+
+\end{document}
+
