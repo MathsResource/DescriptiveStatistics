@@ -1,3 +1,4 @@
+
 \documentclass[a4paper,12pt]{article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{eurosym}
@@ -82,7 +83,8 @@ The Exponential Distribution may be used to answer the following questions:
 
 \item$P(X \leq 5)$ : probability that the lifetime of a randomly selected item will not exceed 5 years.
 
-\item $\lambda$ : average lifetime for items.
+\item $\lambda$ : Rate Parameter 
+\item $\mu$: average lifetime for items ($1/\lambda$)
 \end{itemize}
 \end{framed}
 
@@ -121,7 +123,7 @@ f(x;\lambda) = \begin{cases}
 
 %------------------------------------------------------------------------%
 
-\subsection*{Cumulative Density Function}
+\subsection*{Cumulative Distribution Function}
 \noindent The cumulative distribution function (CDF) of an exponential distribution is
 
 \[
@@ -179,11 +181,11 @@ The expected value is also known as the exponential mean $\mu$.
 \noindent The variance of an exponential random variable $X$ is:
 \[\operatorname{Var}(X) = \frac{1}{\lambda^2}\]
 
-\noindent Suppose $\lambda=10$
+\noindent Suppose $\lambda=0.1$
 
 
 \[
-E(X) = \frac{1}{\lambda} = \frac{1}{1/10} = 10 \]
+E(X) = \frac{1}{\lambda} = \frac{1}{0.1} = 10 \]
 The variance of an exponential random variable $X$ is:
 
 \[\operatorname{Var}(X) = \frac{1}{\lambda^2} = 100\]
