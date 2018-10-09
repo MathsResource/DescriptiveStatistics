@@ -1,0 +1,1263 @@
+
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\chapter{Graphical Methods}
+
+{
+\subsection{Graphical Procedures for Statistics}
+\begin{itemize}
+\item Bar-plots
+\item Histograms
+\item Boxplots
+
+\end{itemize}
+}
+{
+\textbf{Today's Class}
+
+\begin{itemize}
+\item More on Graphical methods
+\begin{itemize}
+\item Bar charts
+\item Box-and-whisker plots
+\end{itemize}
+\item Discrete probability distributions
+\begin{itemize}
+\item Binomial Experiments
+\item The Binomial Probability distribution
+\end{itemize}
+\end{itemize}
+}
+
+\newpage
+\subsection{Bar plots}
+\large
+\begin{itemize} \item A bar plot displays the frequency (or relative frequency) for all observations of a discrete random variable. \item A bar plot is much like a histogram, in that the heights of columns represent the frequency (or relative frequency) of each outcome.
+\item Each outcome of a random experiment corresponds to one and only one column of the bar plot.
+\item A bar plot differs from a histogram in that the columns are distinct and separated from each other by a small distance.
+\end{itemize}
+
+\subsection{Bar plots}
+\large
+Suppose we roll a die 300 times, and obtain the following results
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+
+Outcome & 1 & 2 & 3 & 4 & 5 & 6 \\
+Frequency & 59 &41 &39 &52 &57 &52  \\
+Rel. Freq & 0.196 & 0.136 & 0.130 & 0.173 & 0.190 & 0.173\\
+\hline
+\end{tabular}
+\end{center}
+
+
+{
+\subsection{Bar Plots}
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bbarplot2}
+\end{center}
+}
+
+
+%---------------------------------------------------------------------------%
+
+
+%------------------------------------------------------------------%
+{
+\textbf{Bar plots}
+
+\begin{itemize} \item A bar plot displays the frequency (or relative frequency) for all observations of a discrete random variable. \item A bar plot is much like a histogram, in that the heights of columns represent the frequency (or relative frequency) of each outcome.
+\item Each outcome of a random experiment corresponds to one and only one column of the bar plot.
+\item A bar plot differs from a histogram in that the columns are distinct and separated from each other by a small distance.
+\end{itemize}
+}
+%------------------------------------------------------------------%
+{
+\textbf{Bar plots}
+
+Suppose we roll a die 300 times, and obtain the following results
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+
+Outcome & 1 & 2 & 3 & 4 & 5 & 6 \\
+Frequency & 59 &41 &39 &52 &57 &52  \\
+Rel. Freq & 0.196 & 0.136 & 0.130 & 0.173 & 0.190 & 0.173\\
+\hline
+\end{tabular}
+\end{center}
+
+On the next slide is the bar plot of the relative frequencies of the outcomes of die throw experiment.
+Included on the bar plot is the theoretical probability of each outcome. As each outcome is equally probable, this is just a straight line.\\ \bigskip
+Minor deviations from the theoretical probability can often be assumed to be as a result of random error. In the case of large deviations, there may be a flawed assumption about the theoretical probabilities.
+}
+
+%--------------------------------------------------------%
+
+{
+\textbf{Relative Frequency Bar Plots}
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bbarplot}
+\end{center}
+}
+
+%--------------------------------------------------------%
+
+{
+\textbf{Relative Frequency Bar Plots}
+
+\begin{itemize}
+\item Just as bar plots can be used to graphically depict observed relative frequencies, they can be used to
+depict the theoretical probabilities of each outcome.
+\item We will be using bar plots to visualize the theoretical probabilities of outcomes of discrete random variables.
+\item For this module, bar plots are assumed to be used for this purpose, unless it is clearly expressed otherwise.
+\item On the next slide is a bar plot of the probabilities of each outcome of a dice throw.
+\end{itemize}
+
+}
+
+
+%--------------------------------------------------------%
+
+{
+\textbf{Bar Plots}
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bbarplot3}
+\end{center}
+}
+
+{
+\textbf{Bar Plots}
+
+\begin{itemize}
+\item Bar plots are useful in that they visualize `events'.
+\item Consider the event where either a `4' or a `5' is thrown.
+\item The relevant columns for this event are shaded (next slide).
+\item We will be using bar plots for depicting specific events in upcoming material
+\end{itemize}
+
+}
+
+
+%---------------------------------------------------------------------------%
+%------------------------------------------------------------------%
+{
+\textbf{Bar plots}
+
+\begin{itemize} \item  A bar plot displays the frequency (or relative frequency) for all observations of a discrete random variable. \item  A bar plot is much like a histogram, in that the heights of columns represent the frequency (or relative frequency) of each outcome.
+\item  Each outcome of a random experiment corresponds to one and only one column of the bar plot.
+\item  A bar plot differs from a histogram in that the columns are distinct and separated from each other by a small distance.
+\end{itemize}
+}
+%------------------------------------------------------------------%
+{
+\textbf{Bar plots}
+
+Suppose we roll a die 300 times, and obtain the following results
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+
+Outcome & 1 & 2 & 3 & 4 & 5 & 6 \\
+Frequency & 59 &41 &39 &52 &57 &52  \\
+Rel. Freq & 0.196 & 0.136 & 0.130 & 0.173 & 0.190 & 0.173\\
+\hline
+\end{tabular}
+\end{center}
+
+On the next slide is the bar plot of the relative frequencies of the outcomes of die throw experiment.
+Included on the bar plot is the theoretical probability of each outcome. As each outcome is equally probable, this is just a straight line.\\ \bigskip
+Minor deviations from the theoretical probability can often be assumed to be as a result of random error. In the case of large deviations, there may be a flawed assumption about the theoretical probabilities.
+}
+
+%--------------------------------------------------------%
+
+{
+\textbf{Relative Frequency Bar Plots}
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bbarplot}
+\end{center}
+\begin{itemize}
+\item  Just as bar plots can be used to graphically depict observed relative frequencies, they can be used to
+depict the theoretical probabilities of each outcome.
+\item  We will be using bar plots to visualize the theoretical probabilities of outcomes of discrete random variables.
+\item  For this module, bar plots are assumed to be used for this purpose, unless it is clearly expressed otherwise.
+\item  On the next slide is a bar plot of the probabilities of each outcome of a dice throw.
+\end{itemize}
+
+
+\textbf{Bar Plots}
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bbarplot3}
+\end{center}
+}
+
+{
+\textbf{Bar Plots}
+
+\begin{itemize}
+\item  Bar plots are useful in that they visualize `events'.
+\item  Consider the event where either a `4' or a `5' is thrown.
+\item  The relevant columns for this event are shaded (next slide).
+\item  We will be using bar plots for depicting specific events in upcoming material
+\end{itemize}
+
+\newpage
+\section{Bar Plots}
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bbarplot2}
+\end{center}
+
+\textbf{Boxplots}
+\begin{itemize}
+\item  The second graphical method we will be looking at today is the `box-and-whisker' plot (commonly just referred to as `boxplots')
+\item  The boxplots is a useful tool for assessing the distribution of a dataset, by means of a visual summary.
+\item  Recall the data set of the exam scores of 100 students from yesterday's class (see next slide).
+\item  The quartiles of the data set were $Q_1 = 42.5$, $Q_2 = 54.5$ (with $Q_2$ being the median), and $Q_3 =  65.5$ respectively.
+\item  The interquartile range is $Q_3 - Q_1 = 23$
+\item  The boxplot of the distribution is featured on the next slide.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+{
+\begin{table}[ht]
+\caption{Exam results of 100 students} % title of Table
+\centering % used for centering table
+\begin{tabular}{|c ccc ccc ccc|} % centered columns (4 columns)\hline
+\hline
+
+13&21&22&23&24&25&26&28&29&30\\31&32&33&34&35& 36&36&36&37&38\\
+39&41&41&41&42&43&44&44&44&45\\45&46&47&49&50& 51&51&52&53&53\\
+53&53&53&54&54&54&54&54&54&54\\55&55&55&56&56& 56&57&57&58&59\\
+62&63&63&63&63&64&64&64&64&64\\65&65&65&65&65& 66&66&66&67&69\\
+71&71&72&72&73&74&75&76&76&76\\77&82&84&85&87& 88&91&91&92&99\\ \hline
+\end{tabular}
+\end{table}
+}
+%--------------------------------------------------------%
+
+{
+\textbf{Boxplots}
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bboxplot1}
+\end{center}
+}
+
+%--------------------------------------------------------%
+{
+\textbf{Boxplots}
+\begin{itemize}
+\item  The boxplot is a visual summary containing important aspects of a distribution. \item  The main component of the plot , the `\textbf{\emph{box}}', stretches from the \textbf{\emph{lower hinge}}, defined as $Q_1$, to the \textbf{\emph{upperhinge}}, defined as $Q_3$ .
+\item  The median is shown as a line across the box.
+\item  Therefore the box contains the middle half of the scores in the distribution.
+\item   1/4 of the distribution is between the median line and the upper hinge. Similary 1/4 of the distribution is between the median line and the lower hinge.
+\end{itemize}
+
+\begin{itemize}
+\item  On either side of the box are the \textbf{\emph{whiskers}}.
+\item  To find where to place the whiskers, we must first compute the location of the \textbf{\emph{fences}}, and determine whether or not there are any \textbf{\emph{outliers}} present.
+\item  Firstly, we must compute the location of the \textbf{\emph{lower fence}}.
+\[ \mbox{ Lower Fence}  = Q_1 - 1.5 \times IQR \]
+\item  For our example, the lower fence is
+\[ \mbox{ Lower Fence}  = 42.5 - 1.5 \times 23  = 42.5 - 34.5 = 8 \]
+
+\end{itemize}
+
+\begin{itemize}
+\item  The lower fence is used to determine whether there are any outliers in the lower half of the data set.
+\item  If there is any observed value less than the lower fence, it is considered an outlier.
+\item  The first whisker is drawn at the location of the lowest value that is not considered an outlier.
+\item  If no values are considered outliers, then the whisker is drawn at the location of the smallest value of the dataset.
+\item  For our dataset, the lowest value is 13, which is not less than the lower fence.
+\item  Therefore we draw the first whisker , a vertical line, at this location.
+\item  A horizontal line is drawn connecting the location of this whisker to $Q_1$.
+\end{itemize}
+}
+{
+\noindent \textbf{Outliers}
+\begin{itemize}
+\item  Any value considered to be an outlier should be indicated with an asterisk or a small circle.
+\item  We will see an example of a boxplot with outliers in due course.
+\end{itemize}
+
+
+}
+%---------------------------------------------------------------------------%
+{
+\textbf{Boxplots}
+\begin{itemize}
+\item  Now we must compute the location of the \textbf{\emph{upper fence}}.
+\[ \mbox{ Upper Fence}  = Q_3 + 1.5 \times IQR \]
+\item  For our example, the upper fence is
+\[ \mbox{ Upper Fence}  = 65.5  + 1.5 \times 23  = 65.5 + 34.5 = 100 \]
+
+\end{itemize}
+
+\noindent \textbf{Upper Fence}
+\begin{itemize}
+\item  The upper fence is used to determine whether there are any outliers in the upper half of the data set.
+\item  If there is any observed value greater than the upper fence, it is considered an outlier.
+\item  The second whisker is drawn at the location of the highest value that is not considered an outlier.
+\item  If no values are considered outliers, then the whisker is drawn at the location of the highest value of the dataset.
+\item  For our dataset, the highest value is 99, which is less than the upper fence.
+\item  Therefore we draw the second whisker , a vertical line, at this location.
+\item  A horizontal line is drawn connecting the location of this whisker to $Q_3$.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+{
+\textbf{Boxplots}
+\begin{itemize}
+\item  Remark: If you do not get a sensible value for either the upper or lower fence, you can replace it with the nearest sensible value
+\item  For example, suppose we got a negative lower fence value. It does not make sense to get a negative score in an exam.
+\item  In this case, we could replace the value with a value of $0$.
+\item  similarly for the upper fence: any fence value greater than 100 should be replaced with the value of 100.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+{
+\textbf{Using Boxplots to Compare Distributions}
+\begin{itemize}
+\item  Boxplots are very useful in comparing the distributions of two or more data sets.
+\item  Recall the experiment of 60 students, each throwing a die 100 times.
+\item  Suppose they perform this experiment twice, firstly with a fair die, and then with a crooked die.
+\item  (The probability of the outcomes from the crooked die are as per yesterday's class).
+\item  Boxplots can use used to compare the distribution of the outcomes of both experiments.
+\end{itemize}
+
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bboxplot1}
+\end{center}
+}
+
+%--------------------------------------------------------------------------------------%
+\newpage
+%=====================================================%
+
+{
+
+\textbf{Graphical Procedures for Statistics}
+\begin{itemize}
+\item Bar-plots
+\item Histograms
+\item Boxplots
+
+\end{itemize}
+}
+%----------------------------------------------------------------%
+{
+\textbf{Histograms}
+\noindent \textbf{Thought Experiment}
+\begin{itemize}
+\item Consider an experiment in which each student in a class of 60 rolls a die 100 times.
+\item Each score is recorded, and a total score is calculated.
+\item As the expected value of rolled die is 3.5, the expected total is 350 for each student.
+\item At the end of the experiment the students reported their totals.
+\item The totals were put into ascending order, and tabulated as follows (next slide).
+\end{itemize}
+
+}
+
+%--------------------------------------------------------%
+{
+\textbf{Outcomes of Die-Throw Experiment}
+\small
+\begin{center}
+\begin{tabular}{|c c c c c c c c c c|}
+\hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+307 & 321 & 324 & 328 & 329 & 330 & 334 & 335 & 336 &337 \\
+337 & 337 & 338 & 339 & 339 & 342 & 343 & 343 & 344 &344 \\
+346 & 346 & 347 & 348 & 348 & 348 & 350 & 351 & 352 &352 \\
+353 & 353 & 353 & 354 & 354 & 356 & 356 & 357 & 357 &358 \\
+358 & 360 & 360 & 361 & 362 & 363 & 365 & 365 & 369 &369 \\
+370 & 370 & 374 & 378 & 381 & 384 & 385 & 386 & 392 &398 \\
+\hline
+\end{tabular}
+\end{center}
+\normalsize
+\noindent {As an aside}
+\begin{itemize}
+\item What proportion of outcomes are less than or equal to 330? \\ (Answer: $10\%$)
+\item What proportion of outcomes are greater than or equal to 370?\\ (Answer: $16.66\%$)
+\end{itemize}
+}
+%----------------------------------------------------------------%
+{
+\textbf{What is a Histogram}
+
+\begin{itemize}
+\item A histogram is a plot that lets you discover, and show, the underlying frequency distribution (shape) of a set of continuous data.
+\item This allows the inspection of the data for its underlying distribution (e.g., normal distribution), outliers, skewness, etc. 
+\item Histograms should depict with the frequency or relative frequency in each ``\textbf{bin}".
+
+\end{itemize}
+}
+%----------------------------------------------------------------%
+{
+\textbf{What is a Histogram}
+
+\begin{itemize}
+\item To construct a histogram from a continuous variable you first need to split the data into intervals, called \textbf{bins}.
+\item Conventionally, the number of bins should be \textbf{\textit{near}} the square root of the sample size.
+\[ N(Bins) \approx \sqrt{n} \]
+
+\item The Bins should have equal size (i.e. same width)
+\item The Bins should include the maximum and the minimum values in the data.
+\item Every data point should have precisely one bins that it is supposed to go in.
+
+\end{itemize}
+}
+%--------------------------------------------------------%
+
+{
+\textbf{Histograms}
+
+For the die-throw experiment;
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist}
+\end{center}
+
+}
+%----------------------------------------------------------------%
+{
+\textbf{Constructing Histograms}
+
+\begin{itemize}
+\item Compute an appropriate number of class intervals.
+\item As a rule of thumb, the number of class intervals is usually approximately the square root of the number of observations.
+\item As there are 60 observations, we would normally use 7 or 8 class intervals.
+\item To save time, we will just use 5 class intervals.
+\end{itemize}
+
+}
+
+%--------------------------------------------------------%
+
+{
+\textbf{Histograms}
+
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist2}
+\end{center}
+
+}
+%--------------------------------------------------------%
+
+{
+\textbf{Histograms}
+
+\begin{itemize}
+\item Suppose that the experiment of throwing a die 100 times and recording the total was repeated 100,000 times.
+\item \textit{(If implemented on a computer, we would call this a simulation study)}
+\item The histogram of data (with a class interval width of 2) is shown on the next slide.
+\item How should the shape of the histogram be described?
+\item ``Bell-shaped" would be a suitable description.
+\end{itemize}
+}
+%--------------------------------------------------------%
+
+{
+\textbf{Histograms}
+
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist3}
+\end{center}
+
+}
+%--------------------------------------------------------%
+
+{
+
+\textbf{Simulation Study}
+A couple of remarks about the simulation study, some of which will be relevant later on.
+\begin{itemize}
+% \item Approximately 76\% of the values are between 330 and 370.
+\item Approximately 68.7\% of the values in the simulation study are between 332 and 367.
+\item Approximately 95\% of the values are between 316 and 383.
+\item $2.5\%$ of the values output are less than 316.
+\item $2.5\%$ of the values study output are greater than 383.
+\item 175 values are greater than or equal to 400, whereas 198 values are less than or equal to 300.
+\item Results such as these are unusual, but they are not impossible.
+\end{itemize}
+}
+\newpage
+%--------------------------------------------------------%
+
+{
+
+\textbf{Random Variables}
+A pair of dice is thrown. Let X denote the minimum of the two numbers which occur.
+Find the distributions and expected value of X.
+}
+%-------------------------------------------------------------%
+{
+\textbf{Random Variables}
+A fair coin is tossed four times.
+Let X denote the longest string of heads.
+Find the distribution and expectation of X.}
+%-------------------------------------------------------------%
+{\textbf{Random Variables}
+A fair coin is tossed until a head or five tails occurs.
+Find the expected number E of tosses of the coin.}
+%-------------------------------------------------------------%
+{\textbf{Random Variables}A coin is weighted so that P(H) = 0.75 and P(T ) = 0.25
+
+The coin is tossed three times. Let X denote the number of
+heads that appear.
+\begin{itemize}
+\item (a) Find the distribution f of X.
+\item (b) Find the expectation E(X).
+\end{itemize}
+}
+
+%-------------------------------------------------------------%
+{
+\begin{itemize}
+\item Now consider an experiment with only two outcomes. Independent repeated trials of such an experiment are
+called Bernoulli trials, named after the Swiss mathematician Jacob Bernoulli (16541705). \item The term \textbf{\emph{independent
+trials}} means that the outcome of any trial does not depend on the previous outcomes (such as tossing a coin).
+\item We will call one of the outcomes the ``success" and the other outcome the ``failure".
+\end{itemize}
+}
+
+%-------------------------------------------------------------%
+{
+\begin{itemize} \item
+Let $p$ denote the probability of success in a Bernoulli trial, and so $q = 1 - p$ is the probability of failure.
+A binomial experiment consists of a fixed number of Bernoulli trials. \item A binomial experiment with $n$ trials and
+probability $p$ of success will be denoted by
+\[B(n, p)\]
+\end{itemize}
+}
+%-------------------------------------------------------------%
+
+
+\begin{verbatim}
+n=60000
+Y=numeric(n)
+for ( i in 1:n){
+
+X=floor(runif(100,1,7))
+Y[i]=sum(X)
+}
+
+Y
+hist(Y,breaks=seq(300,400,by=10),main=c("Totals of 100 Die Throws"),cex.lab=1.4,font.lab=2,xlab=c("Total Score"))
+
+hist(Y,breaks=seq(300,400,by=20),main=c("Totals of 100 Die Throws"),cex.lab=1.4,font.lab=2,xlab=c("Total Score"))
+
+
+
+Z=seq(1:n)
+Y/Z
+
+plot(Y/Z,type="l",col="red",main=c("Die Rolls: Running Average"),font.lab=2,ylab="Average Value", xlab=
+" Number of Throws")
+abline(h=3.5,col="green")
+
+
+#####################################################
+
+plot(Z,Z.y,pch=16,col="red",ylim=c(2.5,5.5),main=c("Variance"),font.lab=2,ylab=" ", xlab="X: Green  Y: Blue  Z: Red" )
+
+points(Y,Y.y,pch=16,col="blue" )
+points(X,X.y,pch=16,col="green" )
+points(c(1000,1000,1000),c(3,4,5),pch=18,cex=1.2)
+lines(c(1000,1000),c(2.75,5.25),lty=3)
+
+
+
+n=100000
+Y=numeric(n)
+for ( i in 1:n){
+
+X=floor(runif(100,1,7))
+Y[i]=sum(X)
+}
+
+Y
+hist(Y,breaks=seq(270,430,by=2),main=c("Totals of 100 Die Throws (n= 100,000)"),cex.lab=1.4,font.lab=2,xlab=c("Total Score")) 
+\end{verbatim}
+
+
+
+{
+\textbf{Boxplots}
+\begin{itemize}
+\item The second graphical method we will be looking at today is the `box-and-whisker' plot (commonly just referred to as `boxplots')
+\item The boxplots is a useful tool for assessing the distribution of a dataset, by means of a visual summary.
+\item Recall the data set of the exam scores of 100 students from yesterday's class (see next slide).
+\item The quartiles of the data set were $Q_1 = 42.5$, $Q_2 = 54.5$ (with $Q_2$ being the median), and $Q_3 =  65.5$ respectively.
+\item The interquartile range is $Q_3 - Q_1 = 23$
+\item The boxplot of the distribution is featured on the next slide.
+\end{itemize}
+}
+%---------------------------------------------------------------------------%
+{
+\begin{table}[ht]
+\caption{Exam results of 100 students} % title of Table
+\centering % used for centering table
+\begin{tabular}{|c ccc ccc ccc|} % centered columns (4 columns)\hline
+\hline
+
+13&21&22&23&24&25&26&28&29&30\\31&32&33&34&35& 36&36&36&37&38\\
+39&41&41&41&42&43&44&44&44&45\\45&46&47&49&50& 51&51&52&53&53\\
+53&53&53&54&54&54&54&54&54&54\\55&55&55&56&56& 56&57&57&58&59\\
+62&63&63&63&63&64&64&64&64&64\\65&65&65&65&65& 66&66&66&67&69\\
+71&71&72&72&73&74&75&76&76&76\\77&82&84&85&87& 88&91&91&92&99\\ \hline
+\end{tabular}
+\end{table}
+}
+
+
+\newpage
+%----------------------------------------------------------------%
+{
+\section{Histograms}
+\begin{itemize}
+\item  Consider an experiment in which each student in a class of 60 rolls a die 100 times.
+\item  Each score is recorded, and a total score is calculated.
+\item  As the expected value of rolled die is 3.5, the expected total is 350 for each student.
+\item  At the end of the experiment the students reported their totals.
+\item  The totals were put into ascending order, and tabulated as follows (next slide).
+\end{itemize}
+
+}
+
+%--------------------------------------------------------%
+{
+\textbf{Outcomes of die-throw experiment}
+\small
+\begin{center}
+\begin{tabular}{|c c c c c c c c c c|}
+\hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+307 & 321 & 324 & 328 & 329 & 330 & 334 & 335 & 336 &337 \\
+337 & 337 & 338 & 339 & 339 & 342 & 343 & 343 & 344 &344 \\
+346 & 346 & 347 & 348 & 348 & 348 & 350 & 351 & 352 &352 \\
+353 & 353 & 353 & 354 & 354 & 356 & 356 & 357 & 357 &358 \\
+358 & 360 & 360 & 361 & 362 & 363 & 365 & 365 & 369 &369 \\
+370 & 370 & 374 & 378 & 381 & 384 & 385 & 386 & 392 &398 \\
+\hline
+\end{tabular}
+\end{center}
+\normalsize
+\begin{itemize}
+\item  What proportion of outcomes are less than or equal to 330? \\ (Answer: $10\%$)
+\item  What proportion of outcomes are greater than or equal to 370?\\ (Answer: $16.66\%$)
+\end{itemize}
+}
+%--------------------------------------------------------%
+
+{
+\textbf{What is a Histograms}
+
+
+
+}
+%--------------------------------------------------------%
+
+{
+\textbf{Histograms}
+For the die-throw experiment;
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist}
+\end{center}
+
+}
+%----------------------------------------------------------------%
+{
+\textbf{Constructing Histograms}
+\begin{itemize}
+\item  Compute an appropriate number of class intervals.
+\item  As a rule of thumb, the number of class intervals is usually approximately the square root of the number of observations.
+\item  As there are 60 observations, we would normally use 7 or 8 class intervals.
+\item  To save time, we will just use 5 class intervals.
+\end{itemize}
+
+}
+
+%--------------------------------------------------------%
+
+{
+\textbf{Histograms}
+
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist2}
+\end{center}
+
+}
+%--------------------------------------------------------%
+
+{
+\textbf{Histograms}
+\begin{itemize}
+\item  Suppose that the experiment of throwing a die 100 times and recording the total was repeated 100,000 times.
+\item  (If implemented on a computer, we would call this a simulation study)
+\item  The histogram of data (with a class interval width of 2) is shown on the next slide.
+\item  How should the shape of the histogram be described?
+\item  ``Bell-shaped" would be a suitable description.
+\end{itemize}
+}
+%--------------------------------------------------------%
+
+{
+\textbf{Histograms}
+
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist3}
+\end{center}
+
+}
+%--------------------------------------------------------%
+
+
+
+%--------------------------------------------------------%
+
+
+{
+\textbf{Boxplots}
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bboxplot1}
+\end{center}
+}
+
+
+
+%----------------------------------------------------------------%
+{
+\subsection{Histograms}
+\begin{itemize}
+\item Consider an experiment in which each student in a class of 60 rolls a die 100 times.
+\item Each score is recorded, and a total score is calculated.
+\item As the expected value of rolled die is 3.5, the expected total is 350 for each student.
+\item At the end of the experiment the students reported their totals.
+\item The totals were put into ascending order, and tabulated as follows (next slide).
+\end{itemize}
+
+}
+
+%--------------------------------------------------------%
+{
+\subsection{Outcomes of die-throw experiment}
+\small
+\begin{center}
+\begin{tabular}{|c c c c c c c c c c|}
+\hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+307 & 321 & 324 & 328 & 329 & 330 & 334 & 335 & 336 &337 \\
+337 & 337 & 338 & 339 & 339 & 342 & 343 & 343 & 344 &344 \\
+346 & 346 & 347 & 348 & 348 & 348 & 350 & 351 & 352 &352 \\
+353 & 353 & 353 & 354 & 354 & 356 & 356 & 357 & 357 &358 \\
+358 & 360 & 360 & 361 & 362 & 363 & 365 & 365 & 369 &369 \\
+370 & 370 & 374 & 378 & 381 & 384 & 385 & 386 & 392 &398 \\
+\hline
+\end{tabular}
+\end{center}
+\normalsize
+\begin{itemize}
+\item What proportion of outcomes are less than or equal to 330? \\ (Answer: $10\%$)
+\item What proportion of outcomes are greater than or equal to 370?\\ (Answer: $16.66\%$)
+\end{itemize}
+}
+%--------------------------------------------------------%
+
+{
+\subsection{What is a Histograms}
+
+
+
+}
+%--------------------------------------------------------%
+
+{
+\subsection{Histograms}
+For the die-throw experiment;
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist}
+\end{center}
+
+}
+%----------------------------------------------------------------%
+{
+\subsection{Constructing Histograms}
+\begin{itemize}
+\item Compute an appropriate number of class intervals.
+\item As a rule of thumb, the number of class intervals is usually approximately the square root of the number of observations.
+\item As there are 60 observations, we would normally use 7 or 8 class intervals.
+\item To save time, we will just use 5 class intervals.
+\end{itemize}
+
+}
+
+%--------------------------------------------------------%
+
+
+\subsection{Histograms}
+
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist2}
+\end{center}
+
+
+%--------------------------------------------------------%
+
+\subsection{Histograms}
+\begin{itemize}
+\item Suppose that the experiment of throwing a die 100 times and recording the total was repeated 100,000 times.
+\item (If implemented on a computer, we would call this a simulation study)
+\item The histogram of data (with a class interval width of 2) is shown on the next slide.
+\item How should the shape of the histogram be described?
+\item ``Bell-shaped" would be a suitable description.
+\end{itemize}
+
+%--------------------------------------------------------%
+
+{
+\subsection{Histograms}
+
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist3}
+\end{center}
+
+}
+%--------------------------------------------------------%
+
+{
+\subsection{Simulation Study}
+A couple of remarks about the simulation study, some of which will be relevant later on.
+\begin{itemize}
+% \item Approximately 76\% of the values are between 330 and 370.
+\item Approximately 68.7\% of the values in the simulation study are between 332 and 367.
+\item Approximately 95\% of the values are between 316 and 383.
+\item $2.5\%$ of the values output are less than 316.
+\item $2.5\%$ of the values study output are greater than 383.
+\item 175 values are greater than or equal to 400, whereas 198 values are less than or equal to 300.
+\item Results such as these are unusual, but they are not impossible.
+\end{itemize}
+}
+
+\newpage
+
+
+\section{Categorical Data}
+\subsection{Visualising Categorical Data}
+{ \textbf{Visualising Categorical Data}}
+We first count the number of entries in each category - the frequencies - and construct a { frequency table}.\\[0.4cm]
+A { bar chart} is simply a graph with the frequencies (or relative frequencies) on the y-axis and the category labels on the x-axis.\\[0.6cm]
+Consider the following example:\\[0.2cm]
+In 2011 a market researcher carried out an online survey with the intention of discovering the market share of various mobile devices. Participants were asked tick a box indicating the mobile device that they use: ``Android'', ``Apple'', ``BlackBerry'', ``Windows'' or ``Other''. In total 500 individuals were surveyed and a frequency table was constructed (see next slide).
+
+
+
+
+
+
+\subsection{Categorical Data: Frequency Table}
+{ \textbf{Categorical Data: Frequency Table}\\[-1cm]}
+\begin{center}
+Market Share 2011: Ordered highest to lowest frequency\\[0.1cm]
+\begin{tabular}{|c|r|r|}
+\hline
+&&\\[-0.4cm]
+Category   & Frequency & Relative Frequency \\
+&&\\[-0.5cm]
+\hline
+&&\\[-0.4cm]
+Android    &   174     & $\tfrac{174}{500} = 0.348$ \\[0.2cm]
+Other      &   138     & $\tfrac{138}{500} = 0.276$ \\[0.2cm]
+Apple      &   107     & $\tfrac{107}{500} = 0.214$ \\[0.2cm]
+BlackBerry &    74     & $\tfrac{74}{500} = 0.148$ \\[0.2cm]
+Windows    &     7     & $\tfrac{7}{500} = 0.014$ \\[0.2cm]
+\hline
+&&\\[-0.4cm]
+\multicolumn{1}{|r|}{Total:} & $n = 500$ & $\tfrac{500}{500} = 1.000$ \\[0.1cm]
+\hline
+\end{tabular}
+\end{center}
+\begin{itemize}\itemsep0.2cm
+\item The symbol for the total sample size is {\boldmath$n$} - we will use this throughout the course.
+\item The relative frequencies (or proportions) add to 1.00. Also, these serve as estimates of the true \emph{population proportions}.
+\end{itemize}
+
+
+
+
+
+\subsection{Categorical Data: Bar Chart (Frequency)}
+%{ \textbf{Categorical Data: Bar Chart (Frequency)}\\[-1.1cm]}
+%\begin{center}
+%\includegraphics[width=0.8\textwidth, trim = 0.0cm 0.5cm 0.3cm 1cm, clip]{MobileDevice-Rel}
+%\end{center}
+\[IMAGE\]
+\begin{itemize}\itemsep0.2cm
+\item Note that there are { gaps} between the various categories.
+\end{itemize}
+
+
+\subsection{Categorical Data: Bar Chart (Relative Frequency)}
+%{ \textbf{Categorical Data: Bar Chart (Relative Frequency)}\\[-1.1cm]}
+%\begin{center}
+%\includegraphics[width=0.8\textwidth, trim = 0.0cm 0.5cm 0.3cm 1cm, clip]{MobileDevice-Rel}
+%\end{center}
+\[IMAGE\]
+\begin{itemize}\itemsep0.2cm
+\item Same picture but using relative frequency (see y-axis).
+\end{itemize}
+
+
+%%\subsection{R Code: Bar Chart}
+%%{ \textbf{R Code: Bar Chart}\\[-1.1cm]}
+%%The R code used to draw a bar chart is:\\[0.1cm]
+%%\begin{tabular}{|l|}
+%%\hline
+%%\texttt{freq = c(174,138,107,74,7)}\\
+%%\texttt{mobile = c("Android","Other","Apple","BlackBerry",}\\
+%%\hspace{2.6cm}\texttt{"Windows")}\\
+%%\texttt{barplot(freq, names=mobile)}\\
+%%\hline
+%%\multicolumn{1}{c}{}\\[-0.1cm]
+%%\end{tabular}
+%%You should \emph{always} label the axes:\\[0.1cm]
+%%\begin{tabular}{|l|}
+%%\hline
+%%\texttt{barplot(freq, names=mobile, xlab="Mobile Device",}\\
+%%\hspace{1.9cm}\texttt{ylab="Frequency")}\\
+%%\hline
+%%\multicolumn{1}{c}{}\\[-0.1cm]
+%%\end{tabular}
+%%Some aesthetic improvements:\\[0.1cm]
+%%\begin{tabular}{|l|}
+%%\hline
+%%\texttt{barplot(freq, names=mobile, xlab="Mobile Device",}\\
+%%\hspace{1.9cm}\texttt{ylab="Frequency",density=20)}\\
+%%\texttt{abline(h=0)}\\
+%%\hline
+%%\multicolumn{1}{c}{}\\[-0.1cm]
+%%\end{tabular}
+%%Run \boxed{\text{\texttt{?barplot}}} for more details.
+%%
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------%
+{
+\subsection{Histograms}
+\begin{itemize}
+\item Consider an experiment in which each student in a class of 60 rolls a die 100 times.
+\item Each score is recorded, and a total score is calculated.
+\item As the expected value of rolled die is 3.5, the expected total is 350 for each student.
+\item At the end of the experiment the students reported their totals.
+\item The totals were put into ascending order, and tabulated as follows (next slide).
+\end{itemize}
+
+}
+
+%--------------------------------------------------------%
+{
+\subsection{Outcomes of die-throw experiment}
+\small
+\begin{center}
+\begin{tabular}{|c c c c c c c c c c|}
+\hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+307 & 321 & 324 & 328 & 329 & 330 & 334 & 335 & 336 &337 \\
+337 & 337 & 338 & 339 & 339 & 342 & 343 & 343 & 344 &344 \\
+346 & 346 & 347 & 348 & 348 & 348 & 350 & 351 & 352 &352 \\
+353 & 353 & 353 & 354 & 354 & 356 & 356 & 357 & 357 &358 \\
+358 & 360 & 360 & 361 & 362 & 363 & 365 & 365 & 369 &369 \\
+370 & 370 & 374 & 378 & 381 & 384 & 385 & 386 & 392 &398 \\
+\hline
+\end{tabular}
+\end{center}
+\normalsize
+\begin{itemize}
+\item What proportion of outcomes are less than or equal to 330? \\ (Answer: $10\%$)
+\item What proportion of outcomes are greater than or equal to 370?\\ (Answer: $16.66\%$)
+\end{itemize}
+}
+%--------------------------------------------------------%
+
+{
+\subsection{What is a Histograms}
+
+
+
+}
+%--------------------------------------------------------%
+
+{
+\subsection{Histograms}
+For the die-throw experiment;
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist}
+\end{center}
+
+}
+%----------------------------------------------------------------%
+{
+\subsection{Constructing Histograms}
+\begin{itemize}
+\item Compute an appropriate number of class intervals.
+\item As a rule of thumb, the number of class intervals is usually approximately the square root of the number of observations.
+\item As there are 60 observations, we would normally use 7 or 8 class intervals.
+\item To save time, we will just use 5 class intervals.
+\end{itemize}
+
+}
+
+%--------------------------------------------------------%
+
+
+\subsection{Histograms}
+
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist2}
+\end{center}
+
+
+%--------------------------------------------------------%
+
+\subsection{Histograms}
+\begin{itemize}
+\item Suppose that the experiment of throwing a die 100 times and recording the total was repeated 100,000 times.
+\item (If implemented on a computer, we would call this a simulation study)
+\item The histogram of data (with a class interval width of 2) is shown on the next slide.
+\item How should the shape of the histogram be described?
+\item ``Bell-shaped" would be a suitable description.
+\end{itemize}
+
+%--------------------------------------------------------%
+
+{
+\subsection{Histograms}
+
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist3}
+\end{center}
+
+}
+%--------------------------------------------------------%
+
+{
+\subsection{Simulation Study}
+A couple of remarks about the simulation study, some of which will be relevant later on.
+\begin{itemize}
+% \item Approximately 76\% of the values are between 330 and 370.
+\item Approximately 68.7\% of the values in the simulation study are between 332 and 367.
+\item Approximately 95\% of the values are between 316 and 383.
+\item $2.5\%$ of the values output are less than 316.
+\item $2.5\%$ of the values study output are greater than 383.
+\item 175 values are greater than or equal to 400, whereas 198 values are less than or equal to 300.
+\item Results such as these are unusual, but they are not impossible.
+\end{itemize}
+}
+
+%--------------------------------------------------------%
+
+\section{Graphical Methods}
+\begin{itemize}
+\item Expected value and variance of discrete random variables
+\item Graphical methods
+\begin{itemize}
+\item Frequency tables
+\item Histograms
+\end{itemize}
+\item Some remarks that relate to future material
+\end{itemize}
+
+
+	%------------------------------------------------------------------%
+	{
+		\textbf{Bar plots}
+		
+		\begin{itemize} \item  A bar plot displays the frequency (or relative frequency) for all observations of a discrete random variable. \item  A bar plot is much like a histogram, in that the heights of columns represent the frequency (or relative frequency) of each outcome.
+			\item  Each outcome of a random experiment corresponds to one and only one column of the bar plot.
+			\item  A bar plot differs from a histogram in that the columns are distinct and separated from each other by a small distance.
+		\end{itemize}
+	}
+	%------------------------------------------------------------------%
+	{
+		\textbf{Bar plots}
+		
+		Suppose we roll a die 300 times, and obtain the following results
+		
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|c|}
+				\hline
+				
+				Outcome & 1 & 2 & 3 & 4 & 5 & 6 \\
+				Frequency & 59 &41 &39 &52 &57 &52  \\
+				Rel. Freq & 0.196 & 0.136 & 0.130 & 0.173 & 0.190 & 0.173\\
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		On the next slide is the bar plot of the relative frequencies of the outcomes of die throw experiment.
+		Included on the bar plot is the theoretical probability of each outcome. As each outcome is equally probable, this is just a straight line.\\ \bigskip
+		Minor deviations from the theoretical probability can often be assumed to be as a result of random error. In the case of large deviations, there may be a flawed assumption about the theoretical probabilities.
+	}
+	
+	%--------------------------------------------------------%
+	
+	{
+		\textbf{Relative Frequency Bar Plots}
+		
+		\begin{center}
+			\includegraphics[scale=0.40]{3Bbarplot}
+		\end{center}
+	}
+	
+	%--------------------------------------------------------%
+	
+	{
+		\textbf{Relative Frequency Bar Plots}
+		
+		\begin{itemize}
+			\item  Just as bar plots can be used to graphically depict observed relative frequencies, they can be used to
+			depict the theoretical probabilities of each outcome.
+			\item  We will be using bar plots to visualize the theoretical probabilities of outcomes of discrete random variables.
+			\item  For this module, bar plots are assumed to be used for this purpose, unless it is clearly expressed otherwise.
+			\item  On the next slide is a bar plot of the probabilities of each outcome of a dice throw.
+		\end{itemize}
+		
+	}
+	
+	
+	%--------------------------------------------------------%
+	
+	{
+		\textbf{Bar Plots}
+		\begin{center}
+			\includegraphics[scale=0.40]{3Bbarplot3}
+		\end{center}
+	}
+	
+	{
+		\textbf{Bar Plots}
+		
+		\begin{itemize}
+			\item  Bar plots are useful in that they visualize `events'.
+			\item  Consider the event where either a `4' or a `5' is thrown.
+			\item  The relevant columns for this event are shaded (next slide).
+			\item  We will be using bar plots for depicting specific events in upcoming material
+		\end{itemize}
+		
+	}
+	%--------------------------------------------------------%
+	
+	{
+		\textbf{Bar Plots}
+		
+		\begin{center}
+			\includegraphics[scale=0.40]{3Bbarplot2}
+		\end{center}
+	}
+
+
+%--------------------------------------------------------%
+\newpage
+\begin{verbatim}
+%----R Code ----
+
+n=60000
+Y=numeric(n)
+for ( i in 1:n){
+
+X=floor(runif(100,1,7))
+Y[i]=sum(X)
+}
+
+Y
+hist(Y,breaks=seq(300,400,by=10),main=c("Totals of 100 Die Throws"),cex.lab=1.4,font.lab=2,xlab=c("Total Score"))
+
+hist(Y,breaks=seq(300,400,by=20),main=c("Totals of 100 Die Throws"),cex.lab=1.4,font.lab=2,xlab=c("Total Score"))
+
+
+
+Z=seq(1:n)
+Y/Z
+
+plot(Y/Z,type="l",col="red",main=c("Die Rolls: Running Average"),font.lab=2,ylab="Average Value", xlab=
+" Number of Throws")
+abline(h=3.5,col="green")
+
+
+\end{verbatim}
+\begin{verbatim}
+
+plot(Z,Z.y,pch=16,col="red",ylim=c(2.5,5.5),main=c("Variance"),font.lab=2,ylab=" ", xlab="X: Green  Y: Blue  Z: Red" )
+
+points(Y,Y.y,pch=16,col="blue" )
+points(X,X.y,pch=16,col="green" )
+points(c(1000,1000,1000),c(3,4,5),pch=18,cex=1.2)
+lines(c(1000,1000),c(2.75,5.25),lty=3)
+
+
+
+n=100000
+Y=numeric(n)
+for ( i in 1:n){
+
+X=floor(runif(100,1,7))
+Y[i]=mean(X)
+}
+
+Y
+hist(Y,breaks=seq(270,430,by=2),main=c("Mean of 100 Die Throws (n= 100,000)"),cex.lab=1.4,font.lab=2,xlab=c("Mean of 100 throws")) 
+\end{verbatim}
+
+\subsection{Question 4}
+{ \textbf{Question 4}\\[-0.8cm]}
+The following year (2012) a survey found that 359 individuals used Android, 81 used Apple, 18 used BlackBerry, 18 used Windows and 24 used other devices.\\[0.2cm]
+\begin{enumerate}
+\item What is the value of $n$\,?
+\item Construct a frequency table (ordered highest to lowest frequency) and include a column with relative frequencies.
+\item Estimate the proportion of individuals who use either Android or Apple devices.
+
+\item Estimate the proportion of individuals who use other devices. What symbol would we use for this proportion?
+\item What is the \textbf{true} proportion of individuals who use other devices? What symbol would we use for this proportion?
+\item Draw the bar chart.
+\item Comment on how the market has changed since 2011.
+\end{enumerate}
+
+
+\newpage
+
+\end{document}

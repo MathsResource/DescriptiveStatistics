@@ -1,0 +1,164 @@
+
+
+%Computing the Skewness Coefficient
+%{
+%
+%\[S_k = \frac{(n-1)(n-2)}{s} \times \frac{ \sum(x_i - \bar{x})^3 }{ x} \] 
+%}
+%
+%
+
+
+
+
+\section*{Skewness and Kurtosis}
+
+A fundamental task in many statistical analyses is to characterize the location and variability of a data set. A further characterization of the data includes skewness and kurtosis. 
+
+\begin{itemize}
+\item \textbf{Skewness} is a measure of symmetry, or more precisely, the lack of symmetry. A distribution, or data set, is symmetric if it looks the same to the left and right of the center point.
+
+\item \textbf{Kurtosis} is a measure of whether the data are peaked or flat relative to a normal distribution. That is, data sets with high kurtosis tend to have a distinct peak near the mean, decline rather rapidly, and have heavy tails. Data sets with low kurtosis tend to have a flat top near the mean rather than a sharp peak. A uniform distribution would be the extreme case.
+
+\item The histogram is a reasonably effective graphical technique for showing both the skewness and kurtosis of data set.
+
+
+\end{itemize}
+
+
+\subsection{Symmetric and Skewed Distributions }
+\begin{itemize}
+\item  A data set is said to be \textbf{\emph{symmetric}} when data values are distributed in the same way above and below the middle of the sample.
+\item Typically , but not necessarily, distributions are considered to symmetric because the data set does not contain any outliers. (Potentially a symmetric data set may contain outliers on either side of the mean. )
+\item When data sets are symmetrically distributed, the sample mean and median have values close to each other.
+\item Distributions are considered to \textbf{\emph{skewed}} when the data set contains an outlier, or cluster of outliers, distributed away from the main cluster of items, such as in our example.
+
+\end{itemize}
+
+\begin{itemize}
+\item When data sets have skewed distribution, the sample mean and median have values different to each other.
+\item When a data set is \textbf{\emph{symmetric}}, the best measure of centrality is the sample mean.
+\item As the variance is computed using the sample mean, it is considered the best measure of dispersion for symmetrically distributed data. \bigskip
+\item When a data set is \textbf{\emph{skewed}}, the best measure of centrality is the median.
+\item The best measure of dispersion for data with skewed distribution is the IQR.
+\end{itemize}
+
+
+
+
+
+
+
+%--------------------------------------------------------%
+
+
+
+
+
+
+%-------------------------------------------------------------------------%
+
+\section{Skewness and Outliers}
+
+\subsection{Skewness and Outliers}
+
+
+{
+\textbf{Symmetry }
+Symmetry is implied when data values are distributed in the same way above and below the middle of the sample.
+
+Symmetrical data sets: 
+
+\begin{itemize}
+\item are easily interpreted; 
+\item allow a balanced attitude to outliers, that is, those above and below the median can be considered by the same criteria; 
+\item allow comparisons of spread or dispersion with similar data sets. 
+\end{itemize}
+
+Many standard statistical techniques are appropriate only for a symmetric distributional form.
+For this reason, attempts are often made to transform skew-symmetric data so that they become roughly symmetric.
+
+\textbf{Skewness} 
+Skewness is defined as asymmetry in the distribution of the sample data values. Values on one side of the distribution tend to be further from the 'middle' than values on the other side.
+
+For skewed data, the usual measures of location will give different values, for example, mode<median<mean would indicate positive (or right) skewness.
+
+Positive (or right) skewness is more common than negative (or left) skewness.
+}
+
+\begin{itemize}
+\item Some distributions of data, such as the bell curve are symmetric. This means that the right and the left are perfect mirror images of one another. 
+\item But not every distribution of data is symmetric. Sets of data that are not symmetric are said to be asymmetric. 
+\item The measure of how asymmetric a distribution can be is called skewness. As we will see, data can be skewed either to the right or to the left.
+\end{itemize}
+
+%---------------------------%
+
+
+
+The mean, median and mode are all measures of the center of a set of data. The skewness of the data can be determined by how these quantities are related to one another.
+
+%---------------------------%
+
+
+
+\textbf{Skewed to the Right}
+
+Data that are skewed to the right have a long tail that extends to the right. An alternate way of talking about a data set skewed to the right is to say that it is positively skewed. In this situation the mean and the median are both greater than the mode. As a general rule, most of the time for data skewed to the right, the mean will be greater than the median. In summary, for a data set skewed to the right:
+
+%---------------------------%
+
+\noindent \textbf{Skewed to the Right}
+\begin{itemize}
+\item Always: mode $<$ mean
+\item Always: mode $<$ median
+\item Most of the time: mode $<$ median $<$ mean
+
+\end{itemize}
+
+
+%---------------------------%
+
+\noindent \textbf{Skewed to the Left}
+\begin{itemize}
+\item The situation reverses itself when we deal with data skewed to the left. Data that are skewed to the left have a long tail that extends to the left. An alternate way of talking about a data set skewed to the left is to say that it is negatively skewed. \item In this situation the mean and the median are both less than the mode. As a general rule, most of the time for data skewed to the left, the mean will be less than the median. \item In summary, for a data set skewed to the left:
+\end{itemize}
+
+%---------------------------%
+\noindent \textbf{Skewed to the Left}
+\begin{itemize}
+\item Always: mean $<$ mode
+\item Always: median $<$ mode
+\item Most of the time: mean $<$ median $<$ mode
+\end{itemize}
+
+
+
+
+%---------------------------%
+
+
+
+
+\textbf{Measures of Skewness}
+\begin{itemize}
+\item It’s one thing to look at two set of data and determine that one is symmetric while the other is asymmetric. It’s another to look at two sets of asymmetric data and say that one is more skewed than the other. 
+\item It can be very subjective to determine which is more skewed by simply looking at the graph of the distribution. This is why there are ways to numerically calculate the measure of skewness.
+\item One measure of skewness, called \textbf{Pearson’s first coefficient of skewness}, is to subtract the mean from the mode, and then divide this difference by the standard deviation of the data. The reason for dividing the difference is so that we have a dimensionless quantity. 
+
+\item This explains why data skewed to the right has positive skewness. If the data set is skewed to the right, the mean is greater than the mode, and so subtracting the mode from the mean gives a positive number. A similar argument explains why data skewed to the left has negative skewness
+\item Pearson’s second coefficient of skewness is also used to measure the asymmetry of a data set. For this quantity we subtract the mode from the median, multiply this number by three and then divide by the standard deviation.
+\end{itemize}
+
+
+
+\subsection{Applications of Skewed Data}
+
+\begin{itemize}
+\item Skewed data arises quite naturally in various situations. 
+\item Incomes are skewed to the right because even just a few individuals who earn millions of dollars can greatly affect the mean, and there are no negative incomes. 
+\item Similarly data involving the lifetime of a product, such as a brand of light bulb, are skewed to the right. 
+\item Here the smallest that a lifetime can be is zero, and long lasting light bulbs will impart a positive skewness to the data.
+\end{itemize}
+
+

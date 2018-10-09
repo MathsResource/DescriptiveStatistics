@@ -1,0 +1,325 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+	%------------------------------------------------------------%
+
+	\section{Graphical Methods for Descriptive Statistics}
+	The main representations we use in this subject are histograms, stem and leaf diagrams, and boxplots. We also use scatter plots for two variables
+	
+	\subsection{Histograms}
+	
+	A frequency distribution can be represented graphically on a histogram. A histogram is a bar graph on which the bars are adjacent to each other with no space between them. To construct a histogram, arrange the data in equal intervals. Represent the frequencies along the vertical axis and the scores along the horizontal axis. 
+	
+	
+	%---------------------------------------------%
+	\subsection{The shape of a Frequency Distribution}
+	
+	The shape of a distribution refers to 
+	\begin{itemize}
+		\item its symmetry (or lack of it). If a distribution is not symmetric, it is said to be \textbf{skewed}
+		\item its peakedness, formally known as \textbf{kurtosis}.
+	\end{itemize}
+	
+	
+	\subsection{Graphical Methods}
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item Histograms
+			\item Boxplots
+			\item Ogives
+			\item Stem and Leaf Plot
+		\end{enumerate}
+	\end{multicols}
+	
+	
+%---------------------------% \frametitle{Graphical Procedures for Statistics}
+\begin{itemize}
+	\item Bar-plots
+	\item Histograms
+	\item Boxplots
+	
+\end{itemize}
+
+
+%---------------------------% \frametitle{Histograms}
+For the die-throw experiment;
+\begin{center}
+	\includegraphics[scale=0.40]{images/3aDieHist}
+\end{center}
+%
+
+%--------------------------------------%
+\subsubsection{Constructing Histograms}
+\begin{itemize}
+	\item Compute an appropriate number of class intervals.
+	\item As a rule of thumb, the number of class intervals is usually approximately the square root of the number of observations.
+	\item As there are 60 observations, we would normally use 7 or 8 class intervals.
+	\item To save time, we will just use 5 class intervals.
+\end{itemize}
+
+
+
+%---------------------------% \frametitle{Histograms}
+
+\begin{center}
+	\includegraphics[scale=0.40]{images/3aDieHist2}
+\end{center}
+
+\begin{itemize}
+	\item Suppose that the experiment of throwing a die 100 times and recording the total was repeated 100,000 times.
+	\item (If implemented on a computer, we would call this a simulation study)
+	\item The histogram of data (with a class interval width of 2) is shown on the next slide.
+	\item How should the shape of the histogram be described?
+	\item ``Bell-shaped" would be a suitable description.
+\end{itemize}
+
+
+\begin{center}
+	\includegraphics[scale=0.30]{images/3aDieHist3}
+\end{center}
+
+
+%--------------------------------------%
+%---------------------------% \frametitle{Simulation Study}
+A couple of remarks about the simulation study, some of which will be relevant later on.
+\begin{itemize}
+	% \item Approximately 76\% of the values are between 330 and 370.
+	\item Approximately 68.7\% of the values in the simulation study are between 332 and 367.
+	\item Approximately 95\% of the values are between 316 and 383.
+	\item $2.5\%$ of the values output are less than 316.
+	\item $2.5\%$ of the values study output are greater than 383.
+	\item 175 values are greater than or equal to 400, whereas 198 values are less than or equal to 300.
+	\item Results such as these are unusual, but they are not impossible.
+\end{itemize}
+
+%--------------------------------------%
+	\section{Histogram}
+	Histograms (the term was first used by Pearson, 1895) present a graphical representation (see below) of the frequency distribution of the selected variable(s) in which the columns are drawn over the class intervals and the heights of the columns are proportional to the class frequencies.
+	
+	\noindent\textbf{Options:}
+	\begin{enumerate}
+		\item The spread increases but the center remains unchanged.
+		\item Both the spread and the center increase.
+		\item The center increases but the spread decreases.
+		\item The spread increases but the center decreases.
+	\end{enumerate}
+	
+	\noindent \textbf{Comments:}
+	\begin{itemize}
+		\item center - i.e. the measures of centrality, such as mean and median.
+		\item spread - i.e. measures of disperion, such as variance and range.
+	\end{itemize} 
+	
+	%------------------------------------------------%
+	
+	\subsection{Histograms}
+	A histogram is a bar graph of a frequency distribution. As indicated in the figure below, typically the exact class limits are entered along the horizontal axis of the graph while the numbers of observations are listed along the vertical axis. 
+	\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/Hist1}
+	\end{figure}
+
+	\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/hist2}
+	\end{figure}
+	
+	Frequency Distribution of Monthly Apartment Rental Rates for 200 Studio Apartments
+	\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/Hist3}
+	\end{figure}
+	
+	\subsection{Constructing Histograms}
+	\begin{itemize}
+		\item Compute an appropriate number of class intervals.
+		\item As a rule of thumb, the number of class intervals is usually approximately the square root of the number of observations.
+		\item As there are 60 observations, we would normally use 7 or 8 class intervals.
+		\item To save time, we will just use 5 class intervals.
+	\end{itemize}
+	
+	
+\begin{center}
+\includegraphics[scale=0.30]{images/3aDieHist2}
+\end{center}
+	
+
+
+	\subsection{Die Roll Experiment}
+	
+	\begin{itemize}
+		\item Consider an experiment in which each student in a class of 60 rolls a die 100 times.
+		\item Each score is recorded, and a total score is calculated.
+		\item As the expected value of rolled die is 3.5, the expected total is 350 for each student.
+		\item At the end of the experiment the students reported their totals.
+		\item The totals were put into ascending order, and tabulated as follows (next slide).
+	\end{itemize}
+
+	\begin{center}
+		\begin{tabular}{|c c c c c c c c c c|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			307 & 321 & 324 & 328 & 329 & 330 & 334 & 335 & 336 &337 \\
+			337 & 337 & 338 & 339 & 339 & 342 & 343 & 343 & 344 &344 \\
+			346 & 346 & 347 & 348 & 348 & 348 & 350 & 351 & 352 &352 \\
+			353 & 353 & 353 & 354 & 354 & 356 & 356 & 357 & 357 &358 \\
+			358 & 360 & 360 & 361 & 362 & 363 & 365 & 365 & 369 &369 \\
+			370 & 370 & 374 & 378 & 381 & 384 & 385 & 386 & 392 &398 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\normalsize
+	\begin{itemize}
+		\item What proportion of outcomes are less than or equal to 330? \\ (Answer: $10\%$)
+		\item What proportion of outcomes are greater than or equal to 370?\\ (Answer: $16.66\%$)
+	\end{itemize}
+	
+	
+	
+	
+	
+	
+	%=================================================================== %
+	
+	\begin{itemize}
+		\item Suppose that the experiment of throwing a die 100 times and recording the total was repeated 100,000 times.
+		\item (If implemented on a computer, we would call this a simulation study)
+		\item The histogram of data (with a class interval width of 2) is shown on the next slide.
+		\item How should the shape of the histogram be described?
+		\item ``Bell-shaped" would be a suitable description.
+	\end{itemize}
+	
+	
+	%\frametitle{Simulation Study}
+	A couple of remarks about the simulation study, some of which will be relevant later on.
+	\begin{itemize}
+		\item Approximately 76\% of the values are between 330 and 370.
+		\item Approximately 68.7\% of the values in the simulation study are between 332 and 367.
+		\item Approximately 95\% of the values are between 316 and 383.
+		\item $2.5\%$ of the values output are less than 316.
+		\item $2.5\%$ of the values study output are greater than 383.
+		\item 175 values are greater than or equal to 400, whereas 198 values are less than or equal to 300.
+		\item Results such as these are unusual, but they are not impossible.
+	\end{itemize}
+	
+	
+	
+	
+	
+	
+	
+	%=================================================================== %
+	
+	\begin{itemize}
+		\item Now consider an experiment with only two outcomes. Independent repeated trials of such an experiment are
+		called Bernoulli trials, named after the Swiss mathematician Jacob Bernoulli (16541705). \item The term \textbf{\emph{independent
+				trials}} means that the outcome of any trial does not depend on the previous outcomes (such as tossing a coin).
+		\item We will call one of the outcomes the ``success" and the other outcome the ``failure".
+	\end{itemize}
+	
+	
+	%=================================================================== %
+	
+	\begin{itemize} \item
+		Let $p$ denote the probability of success in a Bernoulli trial, and so $q = 1 - p$ is the probability of failure.
+		A binomial experiment consists of a fixed number of Bernoulli trials. \item A binomial experiment with $n$ trials and
+		probability $p$ of success will be denoted by
+		\[B(n, p)\]
+	\end{itemize}
+	
+
+
+
+
+\section{Die Roll Experiment}
+
+\begin{itemize}
+	\item Consider an experiment in which each student in a class of 60 rolls a die 100 times.
+	\item Each score is recorded, and a total score is calculated.
+	\item As the expected value of rolled die is 3.5, the expected total is 350 for each student.
+	\item At the end of the experiment the students reported their totals.
+	\item The totals were put into ascending order, and tabulated as follows (next slide).
+\end{itemize}
+
+
+
+%=================================================================== %
+
+%\frametitle{Outcomes of die-throw experiment}
+\small
+\begin{center}
+	\begin{tabular}{|c c c c c c c c c c|}
+		\hline
+		% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+		307 & 321 & 324 & 328 & 329 & 330 & 334 & 335 & 336 &337 \\
+		337 & 337 & 338 & 339 & 339 & 342 & 343 & 343 & 344 &344 \\
+		346 & 346 & 347 & 348 & 348 & 348 & 350 & 351 & 352 &352 \\
+		353 & 353 & 353 & 354 & 354 & 356 & 356 & 357 & 357 &358 \\
+		358 & 360 & 360 & 361 & 362 & 363 & 365 & 365 & 369 &369 \\
+		370 & 370 & 374 & 378 & 381 & 384 & 385 & 386 & 392 &398 \\
+		\hline
+	\end{tabular}
+\end{center}
+\normalsize
+\begin{itemize}
+	\item What proportion of outcomes are less than or equal to 330? \\ (Answer: $10\%$)
+	\item What proportion of outcomes are greater than or equal to 370?\\ (Answer: $16.66\%$)
+\end{itemize}
+
+
+
+
+
+
+%=================================================================== %
+
+\begin{itemize}
+	\item Suppose that the experiment of throwing a die 100 times and recording the total was repeated 100,000 times.
+	\item (If implemented on a computer, we would call this a simulation study)
+	\item The histogram of data (with a class interval width of 2) is shown on the next slide.
+	\item How should the shape of the histogram be described?
+	\item ``Bell-shaped" would be a suitable description.
+\end{itemize}
+
+
+%\frametitle{Simulation Study}
+A couple of remarks about the simulation study, some of which will be relevant later on.
+\begin{itemize}
+	\item Approximately 76\% of the values are between 330 and 370.
+	\item Approximately 68.7\% of the values in the simulation study are between 332 and 367.
+	\item Approximately 95\% of the values are between 316 and 383.
+	\item $2.5\%$ of the values output are less than 316.
+	\item $2.5\%$ of the values study output are greater than 383.
+	\item 175 values are greater than or equal to 400, whereas 198 values are less than or equal to 300.
+	\item Results such as these are unusual, but they are not impossible.
+\end{itemize}
+
+
+
+
+
+
+
+%=================================================================== %
+
+	
+\newpage
+
+
+\end{document} 

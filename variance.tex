@@ -1,0 +1,123 @@
+
+
+\section{Variance}
+How do we calculate the variance? We can use scientific calculators or we can calculate it by hand using the following formula :
+
+
+We are calculating the difference between each observation x and the mean . 
+Remark : The mean is used in the calculation.
+Some of the differences will be positive and some will be negative so we square the differences to make them all positive.
+
+
+%=================================================%
+
+
+\begin{itemize}
+\item An easier formula to use if you are calculating the sample standard deviation by hand is
+\item The population variance (which is rarely know) is denoted by the Greek letter   (sigma squared).
+\item Important :The standard deviation $\sigma$ is the square root of the variance $\sigma^2$.
+
+\item The standard deviation for the sample is called s and the standard deviation for the population is called $\sigma$.
+\item The standard deviation is often preferred to the variance as a descriptive measure because it is in the same units as the raw data e.g. if your data is measured in years, the standard deviation will also be in years whereas the variance will be in years squared.
+\end{itemize}
+
+
+
+
+
+\subsection{Introducing Variance}
+
+Consider the three data sets $X$, $Y$ and $Z$
+\begin{itemize}
+\item $X= \{900,925,950,975,1025,1050,1075,1100 \}$
+\item $Y=\{900,905,910,920,1080,1090,1095,1100\}$
+\item $Z=\{900,985,990,995,1005,1010,1015,1100\}$
+\end{itemize}
+
+For each of the data sets, the following statements can be verified
+
+\begin{itemize}
+\item The mean of each data set is 1000
+\item There are 8 elements in each data set
+\item The minima and maxima are 900 and 1100 for each set
+\item The range is 200.
+\end{itemize}
+
+From the plot on the next slide, notice how different the three data sets are in terms of dispersion around the mean value.
+
+
+\subsection{Introducing Variance}
+
+
+\begin{center}
+\includegraphics[scale=0.4]{2AVariance}
+\end{center}
+
+
+\subsection{Variance}
+
+
+\begin{itemize}
+
+\item The (population) variance of a random variable is a non-negative number which gives an idea of how widely spread the values are likely to be; the larger the variance, the more scattered the observations on average.
+
+\item Stating the variance gives an impression of how closely concentrated round the expected value the distribution is; it is a measure of the 'spread' of a distribution about its average value.
+
+\item We distinguish between population variance (denoted $\sigma^2$) and sample variance (denoted $s^2$). For now, we will look only at sample variance.
+
+\end{itemize}
+
+
+
+
+\subsection{Sample Variance}
+
+\begin{itemize}
+
+\item Sample variance is a measure of the spread of or dispersion within a set of sample data.
+
+\item The sample variance is the sum of the squared deviations from their mean divided by one less than the number of observations in the data set.
+
+\item For example, for $n$ observations $x_1, x_2, x_3, \ldots , x_n$  with sample mean $\bar{x}$, the sample variance is given by
+
+
+ \[ s^2 = { \sum (x-\bar{x})^2  \over n-1}\]
+
+
+
+
+\end{itemize}
+}
+%--------------------------------------------------%
+{
+\subsection{Sample Standard Deviation}
+\begin{itemize}
+\item Standard deviation is the square root of variance
+\item Standard deviation is commonly used in preference to variance because it is denominated in the same units as the mean.
+\item For example, if dealing with time units, we could have a variance of something like $25$ \emph{ square minutes }, whereas the equivalent standard deviation is 5 minutes.
+\item Population standard deviation is denoted  $\sigma$.
+\item Sample standard deviation is denoted $s$.
+\end{itemize}
+}
+
+%--------------------------------------------------------%
+[fragile]
+\subsection{Using \texttt{R}}Using \texttt{R} to compute standard deviation and variance for these data sets.
+
+\begin{verbatim}
+> X=c(900,925,950,975,1025,1050,1075,1100)
+> Y=c(900,905,910,920,1080,1090,1095,1100)
+> Z=c(900,985,990,995,1005,1010,1015,1100)
+>
+> sd(X);sd(Y);sd(Z)
+[1] 73.19251
+[1] 97.87018
+[1] 54.37962
+> 
+>var(X);var(Y);var(Z)
+[1] 5357.143
+[1] 9578.571
+[1] 2957.143
+\end{verbatim}
+\end{document}
+

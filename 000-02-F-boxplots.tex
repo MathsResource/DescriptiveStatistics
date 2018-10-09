@@ -1,0 +1,618 @@
+﻿\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+
+\begin{document}
+%---------------------------------------------------------------------------------%
+\section{Quantiles}
+ The quantile function is the inverse of the cumulative
+ distribution function. The p-quantile is the value with the
+ property that there is probability p of getting a value less than
+ or equal to it. The median is by definition the 50\% quantile.
+ 
+ Theoretical quantiles are commonly used for the calculation of
+ confidence intervals and for power calculations in connection with
+ designing and dimensioning experiments.
+\begin{itemize}
+\item Quantiles are statistics that describe various subdivisions of a frequency distribution into equal proportions. 
+\item The simplest division that can be envisioned is into two equal halves and the quantile that does this, the 
+median value of the variate, is used also as a measure of central tendency for the distribution.
+
+\item When division is into four parts the values of the variate corresponding to 25\%, 50\% and 75\% of the total 
+distribution are called quartiles.\item The difference between the 1st and 3rd quartiles is called the inter-quartile range. 
+\item It embraces the central 50\% of the distribution and gives a measure of the dispersion of the distribution. 
+\item The 2nd quartile is just the median under another name.
+\end{itemize}
+
+\begin{itemize}
+\item Other quantiles that may be encountered include quintiles (distribution divided at 20\%, 40\%, 60\% and 80\%), 
+deciles (inter-decile range from 1st decile to 9th decile holds 80% of the distribution) and percentiles.
+\end{itemize}
+
+
+\subsection{Quantiles and Percentiles}
+
+A \textbf{percentile} is defined as a point below which a certain per cent of the observations lie e.g. the 50th percentile is the point below which half the observations lie. The percentiles that divide the data into four quarters are called: 
+\begin{description}
+\item[Q1] 25th percentile or lower quartile
+\item[Q2] 50th percentile or median
+\item[Q3] 75th percentile or upper quartile
+\end{description}
+
+\subsection{Inter-Quartile Range}
+The inter-quartile range is used when you have measured location using the median. 
+It has the same advantages and disadvantages as the median.
+
+\subsubsection{Interquartile Range (IQR)}
+The Interquartile Range (Q3 – Q1) is a  measure of variability commonly used for skewed data.
+The IQR  the difference between the point below which 25\% of your data lie and the point below which 75\% of your data lie i.e. Q3  - Q1. 
+
+
+\subsection{Median, and Trimmed Mean}
+
+One problem with using the mean, is that it often does not depict the typical outcome.  If there is one outcome that is very far from the rest of the data, then the mean will be strongly affected by this outcome.  Such an outcome is called an \textbf{\textit{outlier}}.  
+
+An alternative measure is the median.  The median is the middle score.  If we have an even number of events we take the average of the two middles.  The median is better for describing the typical value.  It is often used for income and home prices.
+
+
+\subsection*{Standard Deviation}
+The standard deviation ($\sigma$) for the population or $s$ for the sample is the square root of
+the variance.
+
+% http://www.ltcconline.net/greenl/courses/201/descstat/mean.htm
+
+%------------------------------------------------------------------------------------------%
+
+\section{Interpreting Box-plots}
+
+\begin{itemize} 
+\item \textbf{Outliers}\\
+The first feature that you look for when analysing a boxplot is the presence of outliers.
+
+Outliers are extreme values and can greatly influence your analysis. For that reason, you should check your data and make sure you have entered it correctly.
+
+You also have the option of removing outliers, making a note that you have removed them, and presenting your analysis without them.
+
+\item \textbf{Skewed Data} \\
+The second feature is the degree of skewness. As you learned earlier, the quartiles divide the data into four sections, each containg 25\% of the measurements. 
+
+You are interested in how spread out or tightly packed the data are. The length of the whiskers and the position of the median in the box tell you this. Notice that 25\% of the values in the boxplot are less than Q1 and this includes the outliers.
+
+
+\item \textbf{IQR} \\
+The third feature is the variation/dispersion around the median. The IQR is the middle 50\% of the data. When you are dealing with skewed data, the IQR is the most reliable measure of variation. Outliers affect the mean, making it an unrealistic measure of centrality (for symmetric data).
+
+The most common use of box plots is for comparing two data sets on the same scale. 
+
+For now, it is important that you are clear what a box-plot tells you about a distribution of data and what measure of centrality and variability are most appropriate based on the distribution.
+
+\end{itemize} 
+\subsubsection{The Five-number Summary}
+
+The five-number summary is a descriptive statistic that provides information about a set of observations. 
+
+It consists of the five most important sample percentiles:
+\begin{itemize}
+\item the sample minimum (smallest observation)
+\item the lower quartile or first quartile ($Q_1$)
+\item the median (middle value)
+\item the upper quartile or third quartile ($Q_3$)
+\item the sample maximum (largest observation)
+\end{itemize}
+
+
+
+\textbf{The Five-number Summary : Sample Data}
+
+Suppose a sample has the following five-number summary: 
+\begin{itemize}
+\item the sample minimum = 11
+\item the lower quartile $Q_1$ = 25
+\item the median = 27
+\item the upper quartile $Q_3$ = 31
+\item the sample maximum $ = 38$
+\end{itemize}
+We will use these values for later examples.
+
+%------------------------------------- %
+
+\textbf{Interquartile Range}
+
+The interquartile range (IQR) is a measure of statistical dispersion, being equal to the difference between the first and third quartiles,
+\[IQR = Q_3 -  Q_1. \]
+
+For our sample data, the interquartile range is 
+
+\[IQR = 31 -  25 = 6 \]
+
+(The median is the corresponding measure of location or central tendency.)
+
+
+\textbf{Interquartile Range and Outliers}
+
+The interquartile range is often used to find outliers in data.
+
+Using this approach, outliers are observations that fall below the \textbf{lower fence} \[\mbox{Lower fence} = Q1 - (1.5\times IQR)\] or above the \textbf{upper fence} \[\mbox{Upper fence} = Q3 + (1.5 \times IQR)\].
+
+%-------------------------------------------------- %
+
+\textbf{Interquartile Range and Outliers}
+
+\textbf{Lower Fence}
+\begin{itemize}
+\item Lower fence $= Q1 - (1.5\times IQR)$
+\item Lower fence $= 25 - (1.5\times 6) = 25 - 9 = 16$
+\end{itemize}
+Any value less than 16 (for example, the minimum value 11) is considered an outlier.\\
+
+
+\textbf{Upper Fence}
+\begin{itemize}
+\item Upper fence$ = Q3 + (1.5 \times IQR)$
+\item Upper fence$= 31 + (1.5\times 6) = 31 + 9 = 40$
+\end{itemize}
+
+Any value greater than 40 would considered an outlier. However, as the maximum value is 38, there is no high-value outliers
+
+
+
+
+\subsection{Practical Applications of Boxplots}
+
+The most common use of box plots is for comparing two data sets on the same scale. 
+
+For now, it is important that you are clear what a box-plot tells you about a distribution of data and what measure of centrality and variability are most appropriate based on the distribution.
+
+\subsection*{Tukey's five number summary}
+The five-number summary is a descriptive statistic that provides information about a set of observations. It consists of the five most important sample percentiles:
+\begin{itemize}
+\item the sample minimum (smallest observation)
+\itemthe lower quartile or first quartile
+\itemthe median (middle value)
+\item the upper quartile or third quartile
+\itemthe sample maximum (largest observation).
+\end{itemize}
+
+
+\begin{itemize}
+\item The five number summary consists of the smallest value, the lower quartile, the median, the upper quartile and the largest value in ascending order.
+
+\item A quarter of the measurements in the data set lie between each of the four pairs of values. 
+
+\item The five-number summary can be used to create a simple graph called a boxplot to visually describe the distribution.
+
+\item From the boxplot, you can quickly detect any skewing in the shape of the distribution and see whether there are any outliers present in the data set.
+
+\item An outlier can be caused by human error when entering data or by malfunctioning equipment. 
+
+\item However, outliers can also be valid measurements, and for this reason, it is necessary to isolate them as soon as possible in the analysis. The Box-plot was designed for this purpose.
+\end{itemize}
+
+\end{document}
+
+
+\newpage
+\section{Boxplots}
+{
+
+\begin{itemize}
+
+\item The boxplots is a useful tool for assessing the distribution of a dataset, by means of a visual summary.
+\item Recall the data set of the exam scores of 100 students from yesterday's class (see next slide). \smallskip
+\item The quartiles of the data set were $Q_1 = 42.5$, $Q_2 = 54.5$ (with $Q_2$ being the median), and $Q_3 =  65.5$ respectively.
+\item The interquartile range is $Q_3 - Q_1 = 23$
+\item The boxplot of the distribution is featured on the next slide.
+\end{itemize}
+
+\begin{table}[ht]
+\caption{Exam results of 100 students} % title of Table
+\centering % used for centering table
+\begin{tabular}{|c ccc ccc ccc|} % centered columns (4 columns)\hline
+\hline
+
+13&21&22&23&24&25&26&28&29&30\\31&32&33&34&35& 36&36&36&37&38\\
+39&41&41&41&42&43&44&44&44&45\\45&46&47&49&50& 51&51&52&53&53\\
+53&53&53&54&54&54&54&54&54&54\\55&55&55&56&56& 56&57&57&58&59\\
+62&63&63&63&63&64&64&64&64&64\\65&65&65&65&65& 66&66&66&67&69\\
+71&71&72&72&73&74&75&76&76&76\\77&82&84&85&87& 88&91&91&92&99\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bboxplot1}
+\end{center}
+
+\begin{itemize}
+\item The boxplot is a visual summary containing important aspects of a distribution. \item The main component of the plot , the `\t{\emph{box}}', stretches from the \t{\emph{lower hinge}}, defined as $Q_1$, to the \t{\emph{upperhinge}}, defined as $Q_3$ .
+\item The median is shown as a line across the box.
+\item Therefore the box contains the middle half of the scores in the distribution.
+\item  1/4 of the distribution is between the median line and the upper hinge. Similary 1/4 of the distribution is between the median line and the lower hinge.
+\end{itemize}
+
+\begin{itemize}
+\item On either side of the box are the \t{\emph{whiskers}}.
+\item To find where to place the whiskers, we must first compute the location of the \t{\emph{fences}}, and determine whether or not there are any \t{\emph{outliers}} present.
+\item Firstly, we must compute the location of the \t{\emph{lower fence}}.
+\[ \mbox{ Lower Fence}  = Q_1 - 1.5 \times IQR \]
+\item For our example, the lower fence is
+\[ \mbox{ Lower Fence}  = 42.5 - 1.5 \times 23  = 42.5 - 34.5 = 8 \]
+
+\end{itemize}
+
+\begin{itemize}
+\item The lower fence is used to determine whether there are any outliers in the lower half of the data set.
+\item If there is any observed value less than the lower fence, it is considered an outlier.
+\item The first whisker is drawn at the location of the lowest value that is not considered an outlier.
+\item If no values are considered outliers, then the whisker is drawn at the location of the smallest value of the dataset.
+\item For our dataset, the lowest value is 13, which is not less than the lower fence.
+\item Therefore we draw the first whisker , a vertical line, at this location.
+\item A horizontal line is drawn connecting the location of this whisker to $Q_1$.
+\end{itemize}
+
+\begin{itemize}
+\item Any value considered to be an outlier should be indicated with an asterisk or a small circle.
+\item We will see an example of a boxplot with outliers in due course.
+\end{itemize}
+
+
+
+\begin{itemize}
+\item Now we must compute the location of the \t{\emph{upper fence}}.
+\[ \mbox{ Upper Fence}  = Q_3 + 1.5 \times IQR \]
+\item For our example, the upper fence is
+\[ \mbox{ Upper Fence}  = 65.5  + 1.5 \times 23  = 65.5 + 34.5 = 100 \]
+
+\end{itemize}
+
+\begin{itemize}
+\item The upper fence is used to determine whether there are any outliers in the upper half of the data set.
+\item If there is any observed value greater than the upper fence, it is considered an outlier.
+\item The second whisker is drawn at the location of the highest value that is not considered an outlier.
+\item If no values are considered outliers, then the whisker is drawn at the location of the highest value of the dataset.
+\item For our dataset, the highest value is 99, which is less than the upper fence.
+\item Therefore we draw the second whisker , a vertical line, at this location.
+\item A horizontal line is drawn connecting the location of this whisker to $Q_3$.
+\end{itemize}
+
+\begin{itemize}
+\item Remark: If you do not get a sensible value for either the upper or lower fence, you can replace it with the nearest sensible value
+\item For example, suppose we got a negative lower fence value. It does not make sense to get a negative score in an exam.
+\item In this case, we could replace the value with a value of $0$.
+\item similarly for the upper fence: any fence value greater than 100 should be replaced with the value of 100.
+\end{itemize}
+
+\begin{itemize}
+\item Boxplots are very useful in comparing the distributions of two or more data sets. \smallskip
+\item Recall the experiment of 60 students, each throwing a die 100 times.\smallskip
+\item Suppose they perform this experiment twice, firstly with a fair die, and then with a crooked die. \smallskip
+\item (Relevant to a future class : The probability of the outcomes from the crooked die are ).
+\item Boxplots can use used to compare the distribution of the outcomes of both experiments.
+\end{itemize}
+
+
+\begin{center}
+\includegraphics[scale=0.40]{images/3Bboxplot2}
+\end{center}
+}
+
+
+
+\subsection{Five number summary and the boxplot}
+
+\begin{itemize}
+\item The five number summary consists of the smallest value, the lower quartile, the median, the upper quartile and the largest value in ascending order.
+
+\itemA quarter of the measurements in the data set lie between each of the four pairs of values. 
+
+\itemThe five-number summary can be used to create a simple graph called a boxplot to visually describe the distribution.
+
+
+\itemFrom the boxplot, you can quickly detect any skewing in the shape of the distribution and see whether there are any outliers present in the data set.
+
+\itemAn outlier can be caused by human error when entering data or by malfunctioning equipment. 
+
+\itemHowever, outliers can also be valid measurements, and for this reason, it is necessary to isolate them as soon as possible in the analysis. The Box-plot was designed for this purpose.
+\end{itemize}
+
+
+%=================================================%
+
+\subsection{Introduction to Statistics}
+
+
+To construct a boxplot
+
+\begin{enumerate}
+
+\item Calculate Q1, the median, Q3 and the IQR.
+
+\item Draw a horizontal line to represent the scale of measurement.
+
+
+\item Draw a box just above  the line with the right and left ends at Q1 and Q3.
+
+\item Draw a line through the box at the location of the median.
+
+
+\item To detect outliers you need to determine a lower fence and an upper fence.
+a.Lower fence is  
+b.Upper fence is  
+
+\item Any values below the lower fence or above the upper fence are classes as outliers.
+
+\item To finish the boxplot
+a.Mark any outliers with an asterisk (*) on the graph.
+b.Extend horizontal lines , called whiskers, from the ends of the box to the smallest and largest values that are not outliers.
+c.(Remark – a variation is to extend to the lower and upper fences)
+\end{enumerate}
+%=================================================%
+
+\subsection{What to Look for}
+
+
+
+\begin{itemize}
+\item 
+
+1) Outliers
+The first feature that you look for when analysing a boxplot is the presence of outliers.
+
+Outliers are extreme values and can greatly influence your analysis. For that reason, you should check your data and make sure you have entered it correctly.
+
+You also have the option of removing outliers, making a note that you have removed them, and presenting your analysis without them.
+
+\item 2) Skewed Data
+The second feature is the degree of skewness. As you learned earlier, the quartiles divide the data into four sections, each containg 25\% of the measurements. 
+
+You are interested in how spread out or tightly packed the data are. The length of the whiskers and the position of the median in the box tell you this. Notice that 25\% of the values in the boxplot are less than Q1 and this includes the outliers
+\end{itemize}
+%=================================================%
+
+
+
+\subsection{3: IQR}
+The third feature is the variation/dispersion around the median. The IQR is the middle 50\% of the data. When you are dealing with skewed data, the IQR is the most reliable measure of variation. Outliers affect the mean, making it an unrealistic measure of centrality (for symmetric data).
+
+The most common use of box plots is for comparing two data sets on the same scale. 
+
+For now, it is important that you are clear what a box-plot tells you about a distribution of data and what measure of centrality and variability are most appropriate based on the distribution.
+
+
+\subsection{Accident Prone}
+Accident Prone Ltd has recorded the following data. It shows a record of the ages of the people involved in accidents over a three month period.
+
+You are required to construct a box-plot for this data and to summarise your findings in a brief report.
+
+Remarks  
+The sample size (n) is 40
+The data is already in ascending order
+
+The minimum and maximum are 16 and 64 respectively. 
+The Range is therefore 48.
+
+The median is the average of the 20th (which is 31) and 21st value (which is 32): i.e. 31.5
+
+The lower quartile (Q1) is the average of the 10th and 11th values 21.5
+
+The upper quartile (Q3) is the average of the 30th and 31st values 37.5
+
+The IQR is therefore 16
+
+Fences
+The lower fence is computed as 
+
+
+It makes no sense to use -2.5, so we will use 0 as the value for our lower fence
+
+The upper fence is computed as
+
+
+
+We will have one value  64 higher than the upper fence. 
+
+
+This is an outlier.
+
+[ Overhead also]
+
+
+We notice that it is skewed. 
+
+%=================================================%
+
+\subsection{Introduction to Statistics}
+
+
+[Page 31]
+
+2.2.5 Summary
+If the frequency distribution of your data is symmetric, the histogram will be symmetric and the mean and standard deviation should be used to describe the data.
+
+If the frequency distribution of your data is skewed, the histogram will be skewed and the median and Interquartile Range should be used to describe the data.
+
+\newpage
+%=================================================%
+
+\textbf{Boxplots}
+
+\noindent \textbf{3.   Percentiles}\\
+
+A percentile is defined as a point below which a certain per cent of the observations lie e.g. the 50th percentile is the point below which half the observations lie. The percentiles that divide the data into four quarters are called: 
+\begin{description}
+\item[Q1]       - 25th percentile or lower quartile
+\item[Q2]       - 50th percentile or median
+\item[Q3]        - 75th percentile or upper quartile
+\end{description}
+
+
+%=================================================%
+
+
+\textbf{Boxplots}
+
+A graphical representation of the quartiles is called a Box plot (Figure 1.3). 
+It displays 
+\begin{itemize}
+\item[(a)] lower quartile 
+\item[(b)] median 
+\item[(c)] upper quartile  
+\item[(d)] interquartile range (IQR)  
+\item[(e)] whiskers of length = 1.5 IQR   
+\item[(f)] outlying observations
+\end{itemize}
+
+%=================================================%
+
+\section*{Question 21 - Boxplots}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+4 & 6 & 8 & 9 & 17 & 17 & 18 & 19 & 20 & 22 \\
+22 & 27 & 28 & 29 & 31 & 35 & 38 & 39 & 40 & 46 \\
+48 & 56 & 56 & 57 & 57 & 58 & 58 & 60 & 61 & 62 \\
+64 & 66 & 68 & 69 & 74 & 75 & 78 & 79 & 80 & 82 \\
+\end{tabular} 
+
+\end{center}
+
+lower fence?
+Upper fence?
+Any values above or below fences?
+
+\newpage
+\section{Boxplot}
+\subsection{Boxplot}
+{\bf \tcb{Boxplot}}
+A {\bf boxplot} is a graph containing the following items:\\[0.3cm]
+\begin{enumerate}[1.]\itemsep0.6cm
+\item Quartiles: $Q_1$, $Q_2$ and $Q_3$.
+\item Mimimum/maximum values \emph{not classed as outliers}.
+\item Outliers (values much smaller/larger than the main body of data).\\[1cm]
+\end{enumerate}
+
+We know how to get quartiles. All we need to know is how to classify data as being outliers.
+
+
+
+
+\subsection{Outlier Detection}
+{\bf \tcb{Outlier Detection}}
+
+To find outliers we first calculate the {\bf lower fence} and {\bf upper fence}:
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\\[-0.4cm]
+$LF = Q_1 - 1.5 \times IQR$ \\[0.2cm]
+$UF = Q_3 + 1.5 \times IQR$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item {\bf Outliers} are then:\\[0.2cm]
+\begin{itemize}\itemsep0.4cm
+\item Values smaller than LF.
+\item Values greater than UF.
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+\subsection{Outlier Detection: Example}
+{\bf \tcb{Outlier Detection: Example}}
+
+Let's look at the laptop battery data. In Question 3 we should have found that $Q_1 = 0.8$, $Q_2 = 2.2$, $Q_3 = 4.8$ and $IQR = 4$.\\[0.3cm]
+
+So we have
+\begin{align*}
+LF &= Q_1 - 1.5 \times IQR\\
+&= 0.8 - 1.5 \times 4 = -5.2. \\[0.3cm]
+UF &= Q_3 + 1.5 \times IQR\\
+&= 4.8 + 1.5 \times 4 = \m10.8. \\
+\end{align*}
+
+Any value in the data less than -5.2 or greater than 10.8 is classed as an outlier.
+
+
+
+
+\subsection{Outlier Detection: Example}
+{\bf \tcb{Outlier Detection: Example}}
+Looking at the \emph{ordered} data:
+\begin{center}
+\begin{tabular}{|cccccccccc|}
+\hline
+&&&&&&&&&\\[-0.4cm]
+0.1 & 0.2 & 0.2 & 0.4 & 0.7 & 0.7 & 0.9 & 1.0  & 1.0 & 1.4 \\
+1.5 & 1.6 & 2.2 & 2.3 & 3.0 & 3.0 & 3.3 & 3.4 & 4.2 & 5.4  \\
+5.6 & 5.7 & 6.1 & 12.9 & 14.3 &&&&&\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item Values less than $LF = - 5.2$:\quad {\bf none}.
+\item Values greater than $UF = 10.8$:\quad {\bf 12.9 and 14.3}.\\[0.3cm]
+\item Minimum of non-outliers: {\bf 0.1}.
+\item Maximum of non outliers: {\bf 6.1}.\\[0.5cm]
+\end{itemize}
+
+\emph{We can now draw the boxplot}.
+
+
+
+
+
+\subsection{Boxplot: Example}
+{\bf \tcb{Boxplot: Example}\\[-1.1cm]}
+\begin{center}
+\includegraphics[width=0.8\textwidth, trim = 0.0cm 0.5cm 0.3cm 1cm, clip]{BoxplotLabelled}
+\end{center}
+\begin{itemize}\itemsep0.2cm
+\item Labelled boxplot. Note - it is also useful to include $\bar x$.
+\end{itemize}
+
+
+
+
+\subsection{Boxplot: Example}
+{\bf \tcb{Boxplot: Example}\\[-1.1cm]}
+\begin{center}
+\includegraphics[width=0.8\textwidth, trim = 0.0cm 0.5cm 0.3cm 1cm, clip]{Boxplot}
+\end{center}
+\begin{itemize}\itemsep0.2cm
+\item Boxplot without labels.
+\end{itemize}
+
+
+
+
+\subsection{Boxplot Vs Histogram}
+{\bf \tcb{Boxplot Vs Histogram}\\[-1.1cm]}
+\begin{center}
+\includegraphics[width=0.86\textwidth, trim = 0.2cm 0.0cm 1cm 0.0cm, clip]{BoxplotHist}
+\end{center}
+
+
+
+
+
+
+\end{document}

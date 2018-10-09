@@ -1,0 +1,288 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{enumerate}
+%\usepackage{pgfpages}
+\usepackage[all]{xy}
+\usepackage{textcomp}
+\usepackage{etex}
+\usepackage{tikz}
+\begin{document}
+
+
+
+\section{Boxplots}
+
+\noindent \t{3.   Percentiles}\\
+
+A percentile is defined as a point below which a certain per cent of the observations lie e.g. the 50th percentile is the point below which half the observations lie. The percentiles that divide the data into four quarters are called: 
+\begin{description}
+	\item[Q1]       - 25th percentile or lower quartile
+	\item[Q2]       - 50th percentile or median
+	\item[Q3]        - 75th percentile or upper quartile
+\end{description}
+
+\section{Interquartile Range (IQR)}
+The Interquartile Range (Q3 – Q1) is a  measure of variability commonly used for skewed data.
+The IQR  the difference between the point below which 25% of your data lie and the point below which 75% of your data lie i.e. Q3  - Q1. 
+To find the value of the quartiles, think of Q1 as the middle of the data less than or equal to the median, and of Q3 as the middle of the data greater than or equal to the median.
+Use the same technique for calculating the mean to find these values.
+
+
+
+Example
+
+\begin{itemize}
+	\item Find the three quartiles and the IQR of the following data
+	
+	\[ 15  34  7  12  18  9  1  42  56  28  13  24  35  \]
+	
+	\item First sort the data set into ascending order
+	
+	\[1 7  9 12 13 15 18  24 28 34 35 42 56\]
+\end{itemize}
+
+
+%=================================================%
+
+\[1 7  9 12 13 15 18  24 28 34 35 42 56\]
+
+\begin{itemize}
+\item	Count how many items are in the data set ( answer 13 items)
+
+\item 	Which value is the second quartile, which is the median (answer: the 7th item, which is 18)
+
+\item 	Q1  median of data less than or equal to median ( 7 items)
+
+\end{itemize}
+%=================================================%
+
+{Boxplots}
+
+\[\{1,	7 , 9 ,12 ,13, 15, 18\}\] 
+Answer: the 4th item, which is 12
+•	Q3  median of data greater than or equal to median ( also 7 items)
+
+
+
+\[\{18, 24, 28, 34, 35, 42, 56\} \]
+Answer: the 4th item of this 7, which is 34
+
+The three quartiles are therefore Q1 = 12, Q2 = 18, Q3 = 34
+The interquartile range is therefore Q3 – Q1 = 22
+
+%=================================================%
+
+\section{Boxplots}
+
+A graphical representation of the quartiles is called a Box plot (Figure 1.3). 
+It displays 
+\begin{itemize}
+	\item[(a)] lower quartile 
+	\item[(b)] median 
+	\item[(c)] upper quartile  
+	\item[(d)] interquartile range (IQR)  
+	\item[(e)] whiskers of length = 1.5 IQR   
+	\item[(f)] outlying observations
+\end{itemize}
+
+%=================================================%
+
+{The Coefficient of Variation }
+
+The Coefficient of Variation 	[page 26]
+
+What happens if you have two sets of data with two different means and two different standard deviations? How do you decide which set is more spread out? Remember the size of the standard deviation is relative to the mean it is associated with.
+
+The coefficient of variation (cv) is often used to compare the relative dispersion between two or more sets of data. It is formed by dividing the standard deviation by the mean and is usually expressed as a percentage i.e. (multiplied by 100). Again we distinguish between the population and sample coefficient of variation.
+
+%=================================================%
+
+{Population C.V.}
+
+
+
+
+Population standard deviation
+Population mean
+
+
+
+%=================================================%
+
+{Sample C.V.}
+
+
+
+
+(i.e.     Sample standard deviation divided by Sample mean )
+
+
+The coefficient of variation for different distribution are compared and the distribution with the largest CV value has the greatest spread.
+
+
+
+\section{Dispersion}
+
+The centre of the distribution is only part of the story. We also need to know how spread out - \emph{dispersed} - the data values are.\\[0.8cm]
+
+Consider the following:\\[0.4cm]
+
+A software engineer is offered a job with an annual salary of \texteuro\,45,000. The employer says that this is a very attractive salary as it is above the average for this type of job (\texteuro\,40,000).\\[0.4cm]
+Is this a good offer?... We don't know. Not without knowing how much the data \emph{varies} about the central value.
+
+
+
+\subsection{Dispersion}
+
+%%\begin{center}
+%%	\includegraphics[width=1\textwidth, trim = 0.0cm 0.6cm 0.3cm 1.5cm, clip]{Variance}
+%%\end{center}
+%%\vspace{-0.1cm}
+If the distribution of salaries is highly variable, there are many posts available with a better salary. On the other hand, if variability is very low, we have been offered one of the highest salaries in the field.
+
+
+
+\subsection{The Range}
+{ \subsection{The Range}}
+
+The most basic measure of dispersion is the { range} of the data.\\[-0.4cm]
+
+\begin{align*}
+\boxed{\text{range} = \max(x) - \min(x)},
+\end{align*}
+i.e., the largest value minus the smallest value in the set of data.\\[0.8cm]
+
+Disadvantage: It only tells us the \emph{overall spread} of the data. But what we really want to know is how the data varies about its centre.\\[0.5cm]
+
+We mainly focus on other techniques (standard deviation and inter-quartile range).
+
+
+
+
+\subsection{The Variance}
+
+The { variance} is the \emph{average squared distance from the mean} and is given by:\\[-0.6cm]
+\begin{align*}
+s^2 &= \frac{(x_1 - \bar x)^2 + (x_2 - \bar x)^2 + \ldots + (x_n - \bar x)^2}{n-1}\\[0.2cm]
+&= \frac{\sum (x_i - \bar x)^2}{n-1}
+\end{align*}
+In words, subtract the mean from each value, square the results and then add them all together. Finally, divide by $n-1$.\\
+{\footnotesize(For technical reasons, in the case of variance, we divide by $n-1$ rather than $n$)}\\[0.7cm]
+The units of variance are \emph{squared-units}, for example, if we were looking at income (in euro) then the variance would be in euros-squared.
+
+%You might wonder why we divide by $n-1$ instead of $n$ as in the case of the mean. The theory behind this is beyond the scope of this course but it turns out that dividing by $n-1$ is the correct approach for the variance.
+
+
+
+\subsection{The Variance}
+
+It turns out that the previous formula can be rewritten as:\\
+{\footnotesize(if you're good with sums, i.e., $\Sigma$, then you can show this)}\\[0.2cm]
+\begin{align*}
+\boxed{s^2 = \frac{\sum x_i^2 - n\,{\bar x}^2}{n-1}}\\
+\end{align*}
+This version of the formula involves less computation so we will use it.\\[0.5cm]
+
+
+
+
+\subsection{The Standard Deviation}
+{ \subsection{The Standard Deviation}}
+The { standard deviation} is a \emph{very} important quantity in statistics (as we will see later in this course).\\[0.5cm]
+
+The standard deviation is the \emph{square root} of the variance:
+\begin{align*}
+\boxed{s = \sqrt{s^2} = \sqrt{\frac{\sum x_i^2 - n\,{\bar x}^2}{n-1}}}.\\
+\end{align*}
+Since the variance is in squared-units, the standard deviation has \emph{the same units as the data} (as a result of taking the square root).
+
+
+
+
+\subsection{The Standard Deviation: Example}
+{ \subsection{The Standard Deviation: Example}}
+We return to our earlier example - the incomes of 5 individuals. \\[0.3cm]
+
+\begin{center}
+	\begin{tabular}{|c@{\hspace{0.3cm}}|ccccc|c@{\hspace{0.1cm}}c|}
+		\multicolumn{6}{c}{} && \multicolumn{1}{c}{$\sum$} \\[0.2cm]
+		\hline
+		&&&&&&&\\[-0.4cm]
+		$x_i$ & 25 & 29 & 33 & 35 & 40 && 162 \\[0.1cm]
+		\hline
+		&&&&&&&\\[-0.3cm]
+		$x_i^2$ & 625 & 841 & 1089 & 1225 & 1600 && 5380 \\[0.1cm]
+		\hline
+		\multicolumn{8}{c}{}\\[-0.4cm]
+	\end{tabular}
+\end{center}
+
+Using the above and the mean value, $\bar x = \tfrac{162}{5} = 32.4$, we then calculate the variance:\\[-0.3cm]
+\begin{align*}
+s^2 = \frac{\sum x_i^2 - n\,{\bar x}^2}{n-1} = \frac{5380 - 5 \, (32.4^2)}{5-1} &= \frac{5380 - 5 \, (1049.76)}{4} \\[0.1cm]
+&= \frac{5380 - 524.8}{4} \\[0.1cm]
+&= \frac{131.2}{4} = 32.8 = 32,800 \, \text{\texteuro$^2$}.
+\end{align*}
+
+
+
+
+\subsection{The Standard Deviation: Example}
+{ \subsection{The Standard Deviation: Example}}
+
+The standard deviation is then
+
+\begin{align*}
+s = \sqrt{s^2} = \sqrt{32.8} = 5.727 = 5,727 \, \text{\texteuro}.\\
+\end{align*}
+
+{ Note the units are euros}.
+
+
+
+
+\subsection{Symbols}
+
+It is worth preparing ourselves for things to come:\\[0.4cm]
+
+\begin{itemize}\itemsep0.4cm
+	\item For the \emph{sample standard deviation} we use the symbol $s$ as shown.
+	\item For the true \emph{population standard deviation} we use $\sigma$ (the Greek letter ``sigma'').\\[0.6cm]
+\end{itemize}
+
+Naturally we have $s^2$ and $\sigma^2$ for the sample variance and population variance.\\[0.8cm]
+
+Don't forget, sample \emph{statistics} estimate the true population \emph{parameters}.
+
+
+
+
+\subsection{Important Note on Dispersion Measures}
+
+
+Variance and standard deviation are {\emph{always positive numbers}}.\\[0.7cm]
+
+In fact \emph{all} measures of dispersion are positive numbers.\\[1.8cm]
+
+Consider the following four  numbers: \boxed{-10,\,\,-9,\,\,-5,\,\,-4}.\\[0.3cm] Clearly the centre is negative; however, standard deviation will not be. Show that $\bar x = -7$ and $s = 2.94$.
+
+
+
+
+\end{document} 

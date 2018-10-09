@@ -1,0 +1,93 @@
+
+\section{The Median}
+\textbf{Median} Another measure of location just like the mean. The value that divides the frequency distribution in half when all data values are listed in order. It is insensitive to small numbers of extreme scores in a distribution. Therefore, it is the preferred measure of central tendency for a skewed distribution (in which the mean would be biased) and is usually paired with the \textbf{interquartile range} (IQR) as the accompanying measure of dispersion.
+\begin{itemize}
+\item To compute the \textbf{Median} of $X$ (usually denoted $\tilde{X}$ or $Q_2$), we must first check if there are even or odd elements in the data set. 
+\item Then we have to reorder our data set, into \textbf{\textit{ascending}} order.
+\[  X = \{4, 6, 8, 11, 12, 13, 15, 19\}\]
+\item The median can then be calculated as follows:
+\begin{itemize}
+\item[$\ast$] the middle value of the ordered data set, when there is an odd number of elements.
+\item[$\ast$] the mean of the middle pair of values of the ordered data set, when there is an even number of elements.
+\end{itemize}
+\item For the sample data set $X$ that we have seen previously, there are an even number of values in this data set (recall $n=8$). \\ \smallskip The median is therefore the average of the middle pair of values.
+\[ \tilde{x} = \frac{11+12}{2} = \frac{23}{2} = 11.5 \]
+
+\medskip
+\item Let us add a new value 15 to the data set.
+\[X_2 = \{4,6,12,8,15,19,11, 13,15\}\]
+\item There are 4 elements to the left, and 4 elements to the right.
+\end{itemize}
+
+
+%----------------------------------------------------------------%
+{
+\subsection{Median}
+\begin{itemize}
+\item The other commonly used measure of centrality is the median.
+
+\item The median is the value halfway through the ordered data set, below and above which there lies an equal number of data values.
+\item For an odd sized data set, the median is the middle element of the \textbf{ordered} data set.
+\item For an even sized data set, the median is the average of the middle pair of elements of an \textbf{ordered} data set.
+\item It is generally a good descriptive measure of the location which works well for \textbf{\emph{skewed data}}, or data with \textbf{\emph{outliers}}.
+
+\item For later, the median is the 0.5 quantile, and the second quartile $Q_2$.
+\end{itemize}
+}
+
+%----------------------------------------------------------------%
+{
+\subsection{Computing the median}
+\textbf{Example:}
+
+
+With an odd number of data values, for example nine, we have:
+\begin{itemize}
+\item Data : $\{96, 48, 27, 72, 39, 70, 7, 68, 99 \}$
+\item Ordered Data :  $\{7, 27, 39, 48, 68, 70, 72, 96, 99\}$
+\item Median : 68, leaving four values below and four values above
+\end{itemize}
+\bigskip
+With an even number of data values, for example 8, we have:
+\begin{itemize}
+\item Data : $\{96, 48 ,27 ,72, 39, 70, 7, 68  \}$
+\item Ordered Data : $\{7, 27, 39, 48, 68, 70, 72, 96\}$
+\item Median : Halfway between the two 'middle' data points - in this case halfway between 48 and 68, and so the median is 58
+\end{itemize}
+} %=================================================================%
+\subsection{The median}
+ 
+The median is defined as the value of the number in the middle position when the data is arranged in numerical order.
+ 
+It splits the distribution into two halves. The number of values greater than the median is equal to the number of values less than the median.
+
+The important point here is that when you find where the middle of your data is i.e. the position, it’s the number or value in that position we are interested in.
+
+We calculate the median for both the sample and the population by arranging the numbers in increasing order. 
+
+If there is an odd number of observations, the median is the middle number i.e. find the number in the position (k + 1) /2 where k is the number of values you have.
+
+\subsection{Example (odd number of items)}
+
+\[ \mbox{Data set:}  1.8   2.7   3.5   4.6   5.4\]
+
+
+\begin{itemize}
+\item Number of items k = 5       
+
+\item The median is in position 3 and its value  is 3.5
+If there is an even number of observations the median is the mean of the two observations occupying the middle position i.e. mean of observations in position k / 2 and  (k / 2  + 1) where k is the number of values you have.
+\end{itemize}
+
+\subsection{Example (even number of items)}
+
+\[ \mbox{Data set:}    1.8   2.7   3.5   4.6  \]
+
+\begin{itemize}
+\item Number of items k = 4       
+\item The median is the mean of observations in position  2 and 3 in the ordered sequence  = (2.7 + 3.5 ) /2   = 3.1
+\end{itemize}
+
+
+
+\end{document}
